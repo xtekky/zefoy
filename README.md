@@ -2,7 +2,7 @@
 [![Insta](https://img.shields.io/twitter/follow/lol_Cris?label=Instagram&logo=instagram&logoColor=red&style=social)](https://instagram.com/xtekky)
 # ⚡ FAST OPTIMIZED ZEFOY SCRIPT | UPDATED
 
-## - DM - QUESTIONS | COLLAB | PROJECT IDEA -
+## - DM => QUESTIONS | COLLAB | PROJECT IDEA -
 - 📫 Discord: [xtekky#9031](https://discord.gg/)
 - 📲 Telegram: [t.me/xtekky](https://t.me/xtekky)
 ----
