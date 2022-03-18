@@ -1,6 +1,5 @@
 from selenium import webdriver
 from os import system, name
-
 from time import time, strftime, gmtime, sleep
 import pyfiglet, os, threading
 import warnings
@@ -399,33 +398,25 @@ def methodComments():
     driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/div[1]/div/form/button").click()
     sleep(2)
     if totalKomen == int(jumlah_komentar):
-        usernamenya = driver.find_element_by_xpath(
-            "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/span[1]")
-        komentarnya = driver.find_element_by_xpath(
-            "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/span[2]")
-        counlovenya = driver.find_element_by_xpath(
-            "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/div/span")
+        usernamenya = driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/span[1]")
+        komentarnya = driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/span[2]")
+        counlovenya = driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/div/span")
         print("[?] " + usernamenya.text + " : " + komentarnya.text + " [" + counlovenya.text + " hearts]")
         Comments = int(counlovenya.text.replace(',', ''))
         Username = str(usernamenya.text)
-        driver.find_element_by_xpath(
-            "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/button").click()
+        driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/button").click()
         keBerapa = int(jumlah_komentar)
         totalKomen = 1
 
     else:
-        usernamenya = driver.find_element_by_xpath(
-            "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/span[1]")
-        komentarnya = driver.find_element_by_xpath(
-            "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/span[2]")
-        counlovenya = driver.find_element_by_xpath(
-            "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/div/span")
+        usernamenya = driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/span[1]")
+        komentarnya = driver.find_element_by_xpath( "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/span[2]")
+        counlovenya = driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/div/span")
         print("[?] " + usernamenya.text + " : " + komentarnya.text + " [" + counlovenya.text + " hearts]")
         Comments = int(counlovenya.text.replace(',', ''))
         Username = str(usernamenya.text)
 
-        driver.find_element_by_xpath(
-            "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/button").click()
+        driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/button").click()
         keBerapa += 1
         totalKomen += 1
     print("[+] Comments Hearts sended!")
