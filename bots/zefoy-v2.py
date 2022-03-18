@@ -23,9 +23,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-'''
+SOFTWARE.'''
 
 warnings.filterwarnings("ignore")
 
@@ -40,7 +38,15 @@ def clear():
 clear()
 system('title TIKTOK BOT')
 
-print(pyfiglet.figlet_format("Credits to Github: @xtekky"))
+print("""
+███████╗███████╗███████╗ ██████╗ ██╗   ██╗    ██████╗  ██████╗ ████████╗
+╚══███╔╝██╔════╝██╔════╝██╔═══██╗╚██╗ ██╔╝    ██╔══██╗██╔═══██╗╚══██╔══╝
+  ███╔╝ █████╗  █████╗  ██║   ██║ ╚████╔╝     ██████╔╝██║   ██║   ██║   
+ ███╔╝  ██╔══╝  ██╔══╝  ██║   ██║  ╚██╔╝      ██╔══██╗██║   ██║   ██║   
+███████╗███████╗██║     ╚██████╔╝   ██║       ██████╔╝╚██████╔╝   ██║   
+╚══════╝╚══════╝╚═╝      ╚═════╝    ╚═╝       ╚═════╝  ╚═════╝    ╚═╝   
+                                                                                                                                           
+Credits to Github: @xtekky""")
 
 vidUrl = input("TikTok video URL: ")
 
@@ -209,7 +215,6 @@ def loop2():
                 driver.refresh()
                 loop3()
 
-
 def loop3():
     global Shares
 
@@ -220,19 +225,16 @@ def loop3():
             loop4()  # jika sedang update langsung lanjut
         else:
             driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[3]/div/div[5]/div/button").click()
-
     except:
         print("[-] The captcha is unsolved!")
         sleep(10)
         driver.refresh()
         loop3()
-
     try:
         methodShare()
         sleep(3)
         driver.refresh()
         loop4()
-
     except:
         try:
             lmt = driver.find_element_by_css_selector("h4")
@@ -254,10 +256,8 @@ def loop3():
                     methodShare()
                 else:
                     print("[x] Skip the fitur shares..")
-
             driver.refresh()
             loop4()
-
         except:
             try:
                 fn = driver.find_element_by_xpath("//span[text()='Not found video.']")
@@ -272,17 +272,15 @@ def loop3():
                 driver.refresh()
                 loop4()
 
-
 def loop4():
     global Username
     global Comments
     global totalKomen
     global jumlah_komentar
     global keBerapa
-
+    
     if keBerapa == int(jumlah_komentar):
         keBerapa = 0
-
     try:
         ck = driver.find_element_by_xpath("//*[@id=\"main\"]/div/div[3]/div/p/small")
         if ck.text == "soon will be update":
@@ -290,27 +288,22 @@ def loop4():
             loop1()  # jika sedang update langsung lanjut
         else:
             driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[3]/div/div[3]/div/button").click()
-
     except:
         print("[-] The captcha is unsolved!")
         sleep(10)
         driver.refresh()
         loop4()
-
     try:
         methodComments()
         sleep(3)
         driver.refresh()
         loop1()
-
     except:
         try:
             lmt = driver.find_element_by_css_selector("h4")
             limitnya = lmt.text
             print("[=] Message: " + limitnya)
-
             splitDong = limitnya.split()
-
             if limitnya == "Checking Timer..." or limitnya == "Next Submit: READY....!":
                 methodComments()
             elif splitDong[4].isnumeric():
@@ -324,10 +317,8 @@ def loop4():
                     methodComments()
                 else:
                     print("[x] Skip the fitur comment hearts..")
-
             driver.refresh()
             loop1()
-
         except:
             try:
                 fn = driver.find_element_by_xpath("//span[text()='Not found video.']")
@@ -342,17 +333,13 @@ def loop4():
                 driver.refresh()
                 loop1()
 
-
 def methodView():
     global Views
-
     print("[N] Getting link: ", vidUrl)
-
     # sleep(1)
     driver.find_element_by_xpath("//*[@id=\"sid4\"]/div/form/div/input").clear()  # remove input
     driver.find_element_by_xpath("//*[@id=\"sid4\"]/div/form/div/input").send_keys(vidUrl)  # input url
     driver.find_element_by_xpath("//*[@id=\"sid4\"]/div/form/div/div/button").click()  # submit
-
     sleep(2)
     tv = driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9V\"]/div[1]/div/form/button")
     print("[-] Total views: " + tv.text)
@@ -363,7 +350,6 @@ def methodView():
     # Views += 1000
     print("[+] Views sended!")
 
-
 def methodHearts():
     global Hearts
 
@@ -373,36 +359,26 @@ def methodHearts():
     driver.find_element_by_xpath("//*[@id=\"sid2\"]/div/form/div/input").clear()  # remove input
     driver.find_element_by_xpath('//*[@id="sid2"]/div/form/div/input').send_keys(vidUrl)  # input url
     driver.find_element_by_xpath('//*[@id="sid2"]/div/form/div/div/button').click()  # submit
-
     sleep(2)
     th = driver.find_element_by_xpath("//*[@id=\"c2VuZE9nb2xsb3dlcnNfdGlrdG9r\"]/div[1]/div/form/button")
     print("[-] Total hears: " + th.text)
     Hearts = int(th.text.replace(',', ''))
-
     driver.find_element_by_xpath('//*[@id="c2VuZE9nb2xsb3dlcnNfdGlrdG9r"]/div[1]/div/form/button').click()
-
     print("[+] Hearts sended!")
-
 
 def methodShare():
     global Shares
-
     print("[N] Getting link: ", vidUrl)
-
     # sleep(1)
     driver.find_element_by_xpath("//*[@id=\"sid7\"]/div/form/div/input").clear()  # remove input
     driver.find_element_by_xpath("//*[@id=\"sid7\"]/div/form/div/input").send_keys(vidUrl)  # input url
     driver.find_element_by_xpath("//*[@id=\"sid7\"]/div/form/div/div/button").click()  # submit
-
     sleep(2)
     ts = driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9s\"]/div[1]/div/form/button")
     print("[-] Total share: " + ts.text)
     Shares = int(ts.text.replace(',', ''))
-
     driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9s\"]/div[1]/div/form/button").click()
-
     print("[+] Shares sended!")
-
 
 def methodComments():
     global Username
@@ -410,22 +386,17 @@ def methodComments():
     global totalKomen
     global jumlah_komentar
     global keBerapa
-
     print("[N] Getting link: ", vidUrl)
-
     # sleep(1)
     driver.find_element_by_xpath("//*[@id=\"sid3\"]/div/form/div/input").clear()  # remove input
     driver.find_element_by_xpath("//*[@id=\"sid3\"]/div/form/div/input").send_keys(vidUrl)  # input url
     driver.find_element_by_xpath("//*[@id=\"sid3\"]/div/form/div/div/button").click()  # submit
-
     sleep(2)
     tm = driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/div[1]/div/form/button")
     jumlah_komentar = tm.text
     print("[=] Get number of comments: " + jumlah_komentar)
-
     # sleep(1)
     driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/div[1]/div/form/button").click()
-
     sleep(2)
     if totalKomen == int(jumlah_komentar):
         usernamenya = driver.find_element_by_xpath(
@@ -437,7 +408,6 @@ def methodComments():
         print("[?] " + usernamenya.text + " : " + komentarnya.text + " [" + counlovenya.text + " hearts]")
         Comments = int(counlovenya.text.replace(',', ''))
         Username = str(usernamenya.text)
-
         driver.find_element_by_xpath(
             "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/button").click()
         keBerapa = int(jumlah_komentar)
@@ -458,13 +428,8 @@ def methodComments():
             "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(totalKomen) + "]/ul/li/div/button").click()
         keBerapa += 1
         totalKomen += 1
-
     print("[+] Comments Hearts sended!")
-
-
 clear()
-
-print(pyfiglet.figlet_format("Tiktok BOT", font="sblood"))
 print("Log:")
 
 if int(len(vidUrl)) >= 20:
