@@ -15,13 +15,14 @@
 - #### WORKING ON TIMER RESET | ROTATING PROXY
 - #### REGULARLY UPDATED
 ----
-- ## Account Creator
+## Account Creator
 - ### See [@xtekky](https://github.com/xtekky)'s repository: [github.com/ttk-mass-account](https://github.com/xtekky/tiktok-bot-creator) - not finished yet
 ----
-- ## Newest version
+## Newest version
 - ### Github: [zefoy-v3.py](https://github.com/xtekky/zefoy/blob/main/bots/zefoy-v3.py)
 ----
-- ## How to install
+## How to install
+- **Download [Chromedriver](https://chromedriver.chromium.org/downloads) - copy paste chromedriver.exe in C:/ - PATH will then be C:/chromedriver.exe**
 -  **Download files - unpack - copy file path**
 -  **Go to terminal and paste - replace 'file-path'**
 ```
@@ -31,3 +32,6 @@ cd 'file path'
 ```
 python zefoy-v3.py
 ```
+## Any Issues?
+- **contact me, INFO on top**
+
