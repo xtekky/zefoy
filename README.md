@@ -15,5 +15,5 @@ cd 'file path'
 ```
 - **paste:**
 ```
-python zefoy.py
+python zefoy v2.py
 ```
