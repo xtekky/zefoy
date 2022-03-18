@@ -1,6 +1,6 @@
 # ⚡ FAST OPTIMIZED ZEFOY SCRIPT | UPDATED
 - #### NO PAY TO UNBLOCK OR 5 MONTH OLD BS
-- #### LIGHT FAST | BRAND NEW |OPTIMIZED SCRIPT
+- #### LIGHT FAST | BRAND NEW | OPTIMIZED SCRIPT
 - #### WORKING ON TIMER RESET | ROTATING PROXY
 - #### REGULARLY UPDATED
 ----
@@ -15,5 +15,5 @@ cd 'file path'
 ```
 - **paste:**
 ```
-python zefoy v2.py
+python zefoy-v2.py
 ```
