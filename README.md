@@ -9,7 +9,7 @@
 - 📫 Discord: [xtekky#9031](https://discord.gg/)
 - 📲 Telegram: [t.me/xtekky](https://t.me/xtekky)
 ----
-- #### UPDATED 18/03/2022 v2.5.1 
+- #### UPDATED 18/03/2022 v3.0.1
 - #### NO PAY TO UNBLOCK OR 5 MONTH OLD BS
 - #### LIGHT FAST | BRAND NEW | OPTIMIZED SCRIPT
 - #### WORKING ON TIMER RESET | ROTATING PROXY
