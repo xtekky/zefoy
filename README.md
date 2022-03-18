@@ -1,4 +1,11 @@
+[![Twitter Follow](https://img.shields.io/twitter/follow/_R1bang_.svg?style=social&label=xtekky_)](https://twitter.com/xtekky_)                                                     [![Youtube Channel](https://img.shields.io/youtube/channel/subscribers/UCVCxigi4I9fTuIxTlM9amtA?style=social)](https://www.youtube.com/channel/UC6JZx44gSD6-X_8xZoTMXUg)
+[![Insta](https://img.shields.io/twitter/follow/lol_Cris?label=Instagram&logo=instagram&logoColor=red&style=social)](https://instagram.com/xtekky)
 # ⚡ FAST OPTIMIZED ZEFOY SCRIPT | UPDATED
+
+## - DM - QUESTIONS | COLLAB | PROJECT IDEA -
+- 📫 Discord: [xtekky#9031](https://discord.gg/)
+- 📲 Telegram: [t.me/xtekky](https://t.me/xtekky)
+----
 - #### UPDATED 18/03/2022 v2.5.1 
 - #### NO PAY TO UNBLOCK OR 5 MONTH OLD BS
 - #### LIGHT FAST | BRAND NEW | OPTIMIZED SCRIPT
