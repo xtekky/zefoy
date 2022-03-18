@@ -2,6 +2,7 @@
 - #### NO PAY TO UNBLOCK BS
 - #### LIGHT FAST | OPTIMIZED SCRIPT
 - #### WORKING ON TIMER RESET | ROTATING PROXY
+- #### REGULARLY UPDATED
 ----
 - ## Account Creator
 - ### See [@xtekky](https://github.com/xtekky)'s repository: [github.com/ttk-mass-account](https://github.com/xtekky/tiktok-bot-creator) - not finished yet
