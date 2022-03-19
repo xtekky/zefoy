@@ -59,7 +59,7 @@ if vidUrl:
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
     driver = webdriver.Chrome(PATH, options=chrome_options)
-    wait = WebDriverWait(driver, 5)
+    wait = WebDriverWait(driver, 15)
     driver.set_window_size(1024, 480)
 
     Views = 0
@@ -69,7 +69,7 @@ if vidUrl:
     total_comments = 1
     comments_num = 0
     number = 0
-    Username = "@Anonymouse"
+    Username = "@Anonymous"
 
 
 def beautify(arg):
