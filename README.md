@@ -16,6 +16,14 @@
 - #### WORKING ON TIMER RESET | ROTATING PROXY
 - #### REGULARLY UPDATED
 ----
+## ZEFOY STATUS
+- ### 🟢 [AVAILABLE]  - VIEWS           
+- ### 🟢 [AVAILABLE] - SHARES         
+- ### 🟢 [AVAILABLE] - COMMENT LIKES  
+- ### 🔴 [UNAVAILABLE] - HEARTS         
+- ### 🔴 [UNAVAILABLE] - FOLLOWERS       
+- ### 🔴 [UNAVAILABLE] - LIVE STREAM     
+
 ## Account Creator
 - ### See [@xtekky](https://github.com/xtekky)'s repository: [github.com/ttk-mass-account](https://github.com/xtekky/tiktok-bot-creator) - not finished yet
 ----
