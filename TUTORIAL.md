@@ -41,7 +41,11 @@ python zefoy-v4.py
 ```
 C:/chromedriver.exe
 ```
-
+![image](https://user-images.githubusercontent.com/98614666/159102998-7ece5ad1-c7b9-4503-8975-92b41bf193c1.png)
+- ### SOLVE CAPTCHA FAST ON POP-UP
+- ![image](https://user-images.githubusercontent.com/98614666/159103044-c5928d97-dce0-4a65-ae67-4803a9b764f5.png)
+- ### DONE! - You need to keep the script running, you can minimize the windos - ENJOY!
+- ### Subscribe to my github [@xtekky](https://github.com/xtekky)
 
 
 
