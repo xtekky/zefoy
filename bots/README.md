@@ -1,3 +1,10 @@
-# Zefoy V3
-- ## updated: 10:52 18/03/2022
-- ## New input: chromedriver path
+# Zefoy V4
+- ## updated: 02:26 19/03/2022
+# What is new
+- ### WebDriver Wait
+- ### Newest Selenium version Script
+- ### Added By.
+- ### Grammar Correction
+# To DO
+- Rotating Proxy 
+
