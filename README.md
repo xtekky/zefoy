@@ -21,7 +21,6 @@
 ----
 ## Newest version
 - ### Github: [zefoy-v4.py](https://github.com/xtekky/zefoy/blob/main/bots/zefoy-v4.py)
-----
 _______
 ## Any Issues?
 - **contact me, INFO on top**
