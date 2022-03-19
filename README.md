@@ -20,7 +20,7 @@
 - ### 🟢 [AVAILABLE]  - VIEWS           
 - ### 🟢 [AVAILABLE] - SHARES         
 - ### 🟢 [AVAILABLE] - COMMENT LIKES  
-- ### 🟢 [AVAILABLE] - HEARTS         
+- ### 🔴 [UNAVAILABLE] - HEARTS         
 - ### 🟢 [AVAILABLE] - FOLLOWERS       
 - ### 🔴 [UNAVAILABLE] - LIVE STREAM     
 
