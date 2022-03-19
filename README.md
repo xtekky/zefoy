@@ -4,7 +4,8 @@
 [![Youtube Channel](https://img.shields.io/youtube/channel/subscribers/UCVCxigi4I9fTuIxTlM9amtA?style=social)](https://www.youtube.com/channel/UC6JZx44gSD6-X_8xZoTMXUg)
 [![Insta](https://img.shields.io/twitter/follow/lol_Cris?label=Instagram&logo=instagram&logoColor=red&style=social)](https://instagram.com/xtekky)
 # ⚡ - FAST OPTIMIZED TIKTOK BOT - ZEFOY SCRIPT | [UPDATED V4](https://github.com/xtekky/zefoy/tree/main/bots) - ⚡
-
+## NEW! - ADDED TUTORIAL
+## TO COME - YOUTUBE TUTORIAL
 ## - FEEL FREE TO DM - ISSUES | QUESTIONS | COLLAB | PROJECT IDEA -
 - 📫 Discord: [xtekky#9031](https://discord.gg/)
 - 📲 Telegram: [t.me/xtekky](https://t.me/xtekky)
