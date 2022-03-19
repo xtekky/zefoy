@@ -412,7 +412,7 @@ def loop4():
 def methodFollowers():
     global Followers
 
-    print("[N] Getting link: ", vidUrl)
+    print("[N] Getting TikTok link")
     # sleep(1)
     wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="sid"]/div/form/div/input'))).clear()  # remove input
     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid\"]/div/form/div/input"))).send_keys(vidUrl)  # input url
@@ -427,7 +427,7 @@ def methodFollowers():
 
 def methodView():
     global Views
-    print("[N] Getting link: ", vidUrl)
+    print("[N] Getting TikTok link")
     # sleep(1)
     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid4\"]/div/form/div/input"))).clear()  # remove input
     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid4\"]/div/form/div/input"))).send_keys(vidUrl)  # input url
@@ -446,7 +446,7 @@ def methodView():
 def methodHearts():
     global Hearts
 
-    print("[N] Getting link: ", vidUrl)
+    print("[N] Getting TikTok link")
 
     # sleep(1)
     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid2\"]/div/form/div/input"))).clear()  # remove input
@@ -462,7 +462,7 @@ def methodHearts():
 
 def methodShare():
     global Shares
-    print("[N] Getting link: ", vidUrl)
+    print("[N] Getting TikTok link")
     # sleep(1)
     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid7\"]/div/form/div/input"))).clear()  # remove input
     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid7\"]/div/form/div/input"))).send_keys(vidUrl)  # input url
@@ -481,7 +481,7 @@ def methodComments():
     global total_comments
     global comments_num
     global number
-    print("[N] Getting link: ", vidUrl)
+    print("[N] Getting TikTok link")
     # sleep(1)
     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid3\"]/div/form/div/input"))).clear()  # remove input
     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid3\"]/div/form/div/input"))).send_keys(vidUrl)  # input url
@@ -530,5 +530,4 @@ if int(len(vidUrl)) >= 20:
 
 else:
     print(f"{vidUrl} => URL is invalid!")
-
 
