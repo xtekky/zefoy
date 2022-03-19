@@ -21,7 +21,7 @@
 - ### 🟢 [AVAILABLE] - SHARES         
 - ### 🟢 [AVAILABLE] - COMMENT LIKES  
 - ### 🔴 [UNAVAILABLE] - HEARTS         
-- ### 🟢 [AVAILABLE] - FOLLOWERS       
+- ### 🔴 [UNAVAILABLE] - FOLLOWERS       
 - ### 🔴 [UNAVAILABLE] - LIVE STREAM     
 
 ## Account Creator
