@@ -36,7 +36,7 @@ python zefoy-v4.py
 ![image](https://user-images.githubusercontent.com/98614666/159102779-8dc8dd21-fc4d-46d3-8bb6-a5f43cce5a09.png)
 ## [ 5 ] - FINAL STEPS
 - ### Copy and Paste TikTok Url:
-- ![image](https://user-images.githubusercontent.com/98614666/159102913-185b0bab-7158-4076-88d9-fc0d79c6ccf4.png)
+![image](https://user-images.githubusercontent.com/98614666/159102913-185b0bab-7158-4076-88d9-fc0d79c6ccf4.png)
 - ### Copy and Paste chromedriver.exe PATH (C:/chromedriver.exe):
 ```
 C:/chromedriver.exe
