@@ -1,10 +1,13 @@
-# Zefoy V5
-- ### updated: 17:56 19/03/2022
+# NEW | Zefoy V6
+- ### updated: 00:56 20/03/2022
 ## What is new 
-- ### Followers
+- ### Chromedriver autoinstall
 
+
+______
+# Zefoy V5
+- #### Followers
 # Zefoy V4
-## What is new
 - #### WebDriver Wait
 - #### Newest Selenium version Script
 - #### Added By.
