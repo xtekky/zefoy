@@ -30,9 +30,9 @@ pip install pyfiglet
 cd 'ctrl-v file path'
 ```
 - ### Make that you have python installed - [Download](https://www.microsoft.com/en-us/p/python-310/9pjpw5ldxlz5#activetab=pivot:overviewtab)
-- ### Then Type (For v5):
+- ### Then Type (For v6):
 ```
-python zefoy-v5.py
+python zefoy-v6.py
 ```
 - ### You should see this:
 ![image](https://user-images.githubusercontent.com/98614666/159102779-8dc8dd21-fc4d-46d3-8bb6-a5f43cce5a09.png)
