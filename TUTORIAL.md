@@ -8,7 +8,7 @@
 - ### Copy Paste in C:/ so the directory will be C:/chromedriver.exe
 - 
 ## [ 2 ] - DOWNLOAD | PATH
-- ### Download Code - click => [Here](https://github.com/xtekky/zefoy/archive/refs/heads/main.zip) <=
+- ### Download Code - click => [Here](https://github.com/xtekky/zefoy/archive/refs/tags/v6.0.1.zip) <=
 - ### Unzip - Go to 'bots' File
 ![image](https://user-images.githubusercontent.com/98614666/159102405-3cca6ba7-917f-4b14-83a9-d73ba14e97bd.png)
 - ### Copy File Path 
