@@ -22,7 +22,9 @@ pip install selenium
 ```
 pip install pyfiglet
 ```
-
+```
+pip install chromedriver-autoinstaller
+```
 ## [ 4 ] - RUNNING CODE
 - ### Open Command Prompt (CMD)
 - ### Type:
