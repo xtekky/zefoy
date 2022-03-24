@@ -5,7 +5,7 @@
 [![Insta](https://img.shields.io/twitter/follow/lol_kris?label=Instagram&logo=instagram&logoColor=red&style=social)](https://instagram.com/xtekky)
 # ⚡FLASH TIKTOK BOT - ZEFOY SCRIPT | [UPDATED V6](https://github.com/xtekky/zefoy/tree/main/bots)⚡
 - ## NEW! - ADDED [TUTORIAL](https://github.com/xtekky/zefoy/blob/main/TUTORIAL.md)
-- ## TO COME - YOUTUBE TUTORIAL
+- ## TO COME - YTB TUTORIAL | USER INTERFACE | SILENT MODE
 ## - FEEL FREE TO DM - ISSUES | QUESTIONS | COLLAB | PROJECT IDEA -
 - 📫 Discord: [xtekky#9031](https://discord.gg/)
 - 📲 Telegram: [t.me/xtekky](https://t.me/xtekky)
