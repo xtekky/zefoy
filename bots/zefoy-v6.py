@@ -37,7 +37,6 @@ def clear():
     else:
         _ = system('clear')
 
-
 clear()
 system('title TIKTOK BOT')
 
