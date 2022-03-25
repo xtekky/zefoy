@@ -121,7 +121,7 @@ def main():
 
         while True:
             time_elapsed = strftime('%H:%M:%S', gmtime(time() - start))
-            system(f'title ZEFOY BOT V5 Github: @xtekky ^| Views: {beautify(Views)} ^| Hearts: {beautify(Hearts)} ^| Shares: {beautify(Shares)} ^| Elapsed Time: {time_elapsed}')
+            system(f'title ZEFOY BOT V7 Github: @xtekky ^| Views: {beautify(Views)} ^| Hearts: {beautify(Hearts)} ^| Shares: {beautify(Shares)} ^| Elapsed Time: {time_elapsed}')
 
     #Followers
     def loop0():
