@@ -3,7 +3,7 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/_R1bang_.svg?style=social&label=xtekky_)](https://twitter.com/xtekky_) 
 [![Youtube Channel](https://img.shields.io/youtube/channel/subscribers/UCVCxigi4I9fTuIxTlM9amtA?style=social)](https://www.youtube.com/channel/UC6JZx44gSD6-X_8xZoTMXUg)
 [![Insta](https://img.shields.io/twitter/follow/lol_kris?label=Instagram&logo=instagram&logoColor=red&style=social)](https://instagram.com/xtekky)
-# ⚡FLASH TIKTOK BOT - ZEFOY SCRIPT | [BIG UPDATE V7](https://github.com/xtekky/zefoy/tree/main/bots)⚡
+# ⚡TIKTOK BOT - ZEFOY SCRIPT | [BIG UPDATE V7](https://github.com/xtekky/zefoy/tree/main/bots)⚡
 - ## NEW! - [DISCORD SERVER](https://discord.gg/m6wdhpMV5A)
 - ## [TUTORIAL](https://github.com/xtekky/zefoy/blob/main/TUTORIAL.md)
 - ## NEW! -  USER INTERFACE | SILENT MODE - [zefoy v7](https://github.com/xtekky/zefoy/tree/main/bots/zefoy-v7.py)
