@@ -55,8 +55,8 @@ S I L E N T  -  E D I T I O N ™
 Credits to Github: @xtekky
 """)
 
-#vidUrl = input("TikTok video URL: ")
-vidUrl = 'https://www.tiktok.com/@MS4wLjABAAAAvjtzh7vjUGUzfdb77HHRiXWvXjXZFP-p97eBc94uZP50SxU6bR4bk9_s3tCh7M7w/video/7076804155981024517?is_from_webapp=1&sender_device=pc&web_id=7062836892223768069'
+vidUrl = input("TikTok video URL: ")
+#vidUrl = 'https://www.tiktok.com/@MS4wLjABAAAAvjtzh7vjUGUzfdb77HHRiXWvXjXZFP-p97eBc94uZP50SxU6bR4bk9_s3tCh7M7w/video/7076804155981024517?is_from_webapp=1&sender_device=pc&web_id=7062836892223768069'
 #PATH = input('Input Chromedriver path: ')
 
 
