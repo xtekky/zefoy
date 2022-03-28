@@ -5,7 +5,7 @@
 ![image](https://user-images.githubusercontent.com/98614666/160390771-86d5a58b-8338-402d-9235-1c830149086c.png)
 
 ## [ 1 ] - DOWNLOADING LIBRARIES
-- ### Open Command Prompt (CMD) and Paste/enter each 3 of these commands:
+- ### Open Command Prompt (CMD) and Paste/enter each 4 of these commands:
 ```
 pip install selenium
 ```
@@ -41,14 +41,13 @@ python zefoy-v7.py
 ![image](https://user-images.githubusercontent.com/98614666/160392734-19f8b6d4-ff22-448b-ae90-383e81e205a5.png)
 
 - ### Hit ENTER
-- ### You should see this (for v.7):
+- ### You should see this (for v.71):
 ![image](https://user-images.githubusercontent.com/98614666/160392853-7ee07859-9bd0-455b-be0b-1c01894d4009.png)
 
 ## [ 4 ] - FINAL STEPS
 - ### Copy and Paste TikTok Url:
 ![image](https://user-images.githubusercontent.com/98614666/159102913-185b0bab-7158-4076-88d9-fc0d79c6ccf4.png)
 - ### SOLVE CAPTCHA FAST ON POP-UP
-- 
 ![image](https://user-images.githubusercontent.com/98614666/159103044-c5928d97-dce0-4a65-ae67-4803a9b764f5.png)
 - ### DONE! - You need to keep the script running
 - ### Subscribe to my github [@xtekky](https://github.com/xtekky)
