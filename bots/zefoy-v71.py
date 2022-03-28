@@ -79,7 +79,7 @@ def main():
         chrome_options.add_argument("--mute-audio")
         #chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
         #chromedriver_autoinstaller.install()  # installing auto chromedriver
-        #chrome_options.headless = True
+        chrome_options.headless = True
         driver = uc.Chrome(use_subprocess=True, options=chrome_options)
         driver.get("https://zefoy.com/")
         print('[*] Page loaded')
