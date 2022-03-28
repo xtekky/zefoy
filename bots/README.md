@@ -1,8 +1,9 @@
-# NEW | Zefoy V7 - BIG UPDATE
-- ### updated: 00:56 24/03/2022
-## What is new 
-- ### SILENT MODE AND CAPTCHA BYPASS BY ID INJECTION
+# NEW | Zefoy V7.1
+- ### updated: 18h00 28/03/2022
+- Time in Log and Bug fix + zefoy path bypass
 ______
+# Zefoy V7
+- ####  SILENT MODE AND CAPTCHA BYPASS BY ID INJECTION
 # Zefoy V5
 - #### chromedriver autoinstall
 # Zefoy V5
