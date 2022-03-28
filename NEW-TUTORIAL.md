@@ -15,6 +15,9 @@ pip install pyfiglet
 ```
 pip install chromedriver-autoinstaller
 ```
+```
+pip install undetected-chromedriver
+```
 ## [ 2 ] - COPYING FILE PATH
 - ### Open the folder containing zefoy in zefoy-main > bots:
 ![image](https://user-images.githubusercontent.com/98614666/160391352-5ca3bc19-0351-489a-a4f1-643e60c66334.png)
