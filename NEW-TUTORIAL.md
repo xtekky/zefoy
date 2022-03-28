@@ -34,7 +34,10 @@ cd the file path you just copied
 ```
 python zefoy-v7.py
 ```
-- ### ENTER
+- ### You should see something similar to this
+![image](https://user-images.githubusercontent.com/98614666/160392290-cb7bcd34-c64e-43af-b762-4a3399b0cf92.png)
+
+- ### Hit ENTER
 - ### You should see this (for v.6 only URL):
 ![image](https://user-images.githubusercontent.com/98614666/159102779-8dc8dd21-fc4d-46d3-8bb6-a5f43cce5a09.png)
 
