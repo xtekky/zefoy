@@ -26,7 +26,7 @@ pip install undetected-chromedriver
  
 ## [ 3 ] - RUNNING CODE
 - ### Open Command Prompt (CMD)
-- ### Type:
+- ### Paste the file path you just copied and add **cd** before it:
 ```
 cd the file path you just copied
 ```
