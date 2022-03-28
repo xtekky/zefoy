@@ -15,7 +15,13 @@ pip install pyfiglet
 ```
 pip install chromedriver-autoinstaller
 ```
-## [ 2 ] - RUNNING CODE
+## [ 2 ] - COPYING FILE PATH
+- ### Open the folder containing zefoy in zefoy-main > bots:
+![image](https://user-images.githubusercontent.com/98614666/160391352-5ca3bc19-0351-489a-a4f1-643e60c66334.png)
+- ### Copy the folder path:
+![image](https://user-images.githubusercontent.com/98614666/160391445-ba0f5de0-992c-4faa-a1ec-cab5794bc86a.png)
+ 
+## [ 3 ] - RUNNING CODE
 - ### Open Command Prompt (CMD)
 - ### Type:
 ```
@@ -30,7 +36,7 @@ python zefoy-v7.py
 - ### You should see this (for v.6 only URL):
 ![image](https://user-images.githubusercontent.com/98614666/159102779-8dc8dd21-fc4d-46d3-8bb6-a5f43cce5a09.png)
 
-## [ 3 ] - FINAL STEPS
+## [ 4 ] - FINAL STEPS
 - ### Copy and Paste TikTok Url:
 ![image](https://user-images.githubusercontent.com/98614666/159102913-185b0bab-7158-4076-88d9-fc0d79c6ccf4.png)
 
