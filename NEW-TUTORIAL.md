@@ -1,7 +1,8 @@
 # - C M D  S T E P S - 
+## [ 1 ] - DOWNLOADING CODE
 
 ## [ 1 ] - DOWNLOADING LIBRARIES
-- ### Open Command Prompt (CMD) and Paste:
+- ### Open Command Prompt (CMD) and Paste/enter each 3 of these commands:
 ```
 pip install selenium
 ```
