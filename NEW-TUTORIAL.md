@@ -25,8 +25,10 @@ pip install chromedriver-autoinstaller
 - ### Open Command Prompt (CMD)
 - ### Type:
 ```
-cd 'ctrl-v file path'
+cd the file path you just copied
 ```
+- ### It should end in: \zefoy-main\bots
+![image](https://user-images.githubusercontent.com/98614666/160391780-e23ded36-5594-4592-b1a9-8935384c30d4.png)
 - ### Make sure that you have python installed - [Download](https://www.microsoft.com/en-us/p/python-310/9pjpw5ldxlz5#activetab=pivot:overviewtab)
 - ### Then Type (For v7):
 ```
