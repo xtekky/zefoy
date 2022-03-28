@@ -35,11 +35,11 @@ cd the file path you just copied
 python zefoy-v7.py
 ```
 - ### You should see something similar to this
-![image](https://user-images.githubusercontent.com/98614666/160392568-97a2b36a-e967-4fe8-8341-c51a7fb6d55d.png)
+![image](https://user-images.githubusercontent.com/98614666/160392734-19f8b6d4-ff22-448b-ae90-383e81e205a5.png)
 
 - ### Hit ENTER
 - ### You should see this (for v.7):
-![image](https://user-images.githubusercontent.com/98614666/159102779-8dc8dd21-fc4d-46d3-8bb6-a5f43cce5a09.png)
+![image](https://user-images.githubusercontent.com/98614666/160392853-7ee07859-9bd0-455b-be0b-1c01894d4009.png)
 
 ## [ 4 ] - FINAL STEPS
 - ### Copy and Paste TikTok Url:
