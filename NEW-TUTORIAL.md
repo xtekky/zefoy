@@ -1,5 +1,6 @@
 # - C M D  S T E P S - 
-## [ 1 ] - DOWNLOADING CODE
+## [ 0 ] - DOWNLOADING CODE
+![image](https://user-images.githubusercontent.com/98614666/160390771-86d5a58b-8338-402d-9235-1c830149086c.png)
 
 ## [ 1 ] - DOWNLOADING LIBRARIES
 - ### Open Command Prompt (CMD) and Paste/enter each 3 of these commands:
