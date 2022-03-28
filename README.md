@@ -6,7 +6,6 @@
 # ⚡TIKTOK BOT - ZEFOY SCRIPT | [NEW UPDATE V7.1](https://github.com/xtekky/zefoy/tree/main/bots)⚡
 - ## NEW+STAY UPDATED! - [TELEGRAM GROUP](https://t.me/onlpx) | [DISCORD SERVER](https://discord.gg/m6wdhpMV5A)
 - ## NEW! - [TUTORIAL FOR V7](https://github.com/xtekky/zefoy/blob/main/NEW-TUTORIAL.md)
-- ## NEW! -  USER INTERFACE | SILENT MODE - [zefoy v7.1](https://github.com/xtekky/zefoy/tree/main/bots/zefoy-v71.py)
 - ## TO COME - YTB TUTORIAL
 ## - FEEL FREE TO DM - ISSUES | QUESTIONS | COLLAB | PROJECT IDEA -
 - 📫 Discord: [xtekky#9031](https://discord.gg/)
