@@ -9,6 +9,7 @@ import chromedriver_autoinstaller
 from selenium.webdriver.chrome.service import Service
 import os
 import undetected_chromedriver as uc
+from datetime import datetime
 
 
 '''
@@ -55,9 +56,18 @@ S I L E N T  -  E D I T I O N ™
 Credits to Github: @xtekky
 """)
 
-vidUrl = input("TikTok video URL: ")
-#vidUrl = 'https://www.tiktok.com/@MS4wLjABAAAAvjtzh7vjUGUzfdb77HHRiXWvXjXZFP-p97eBc94uZP50SxU6bR4bk9_s3tCh7M7w/video/7076804155981024517?is_from_webapp=1&sender_device=pc&web_id=7062836892223768069'
+#vidUrl = input("TikTok video URL: ")
+vidUrl = 'https://www.tiktok.com/@MS4wLjABAAAAvjtzh7vjUGUzfdb77HHRiXWvXjXZFP-p97eBc94uZP50SxU6bR4bk9_s3tCh7M7w/video/7076804155981024517?is_from_webapp=1&sender_device=pc&web_id=7062836892223768069'
 #PATH = input('Input Chromedriver path: ')
+
+
+def timez():
+    global current_time
+    print("[*] Time Started")
+    while True:
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+        sleep(0.5)
 
 
 def main():
@@ -70,28 +80,29 @@ def main():
     global comments_num
     global number
     global Username
+    global current_time
 
     if vidUrl:
         start = time()
         time_elapsed = strftime('%H:%M:%S', gmtime(time() - start))
-        print('[*] Loading silent driver')
+        print("[* | "+str(current_time)+"] Loading silent driver")
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument("--mute-audio")
         #chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
         #chromedriver_autoinstaller.install()  # installing auto chromedriver
-        chrome_options.headless = True
+        #chrome_options.headless = True
         driver = uc.Chrome(use_subprocess=True, options=chrome_options)
         driver.get("https://zefoy.com/")
-        print('[*] Page loaded')
+        print("[* | "+str(current_time)+"] Page loaded")
         driver.add_cookie({"name": "PHPSESSID", "value": value})
-        print('[*] Cookie injected')
+        print("[* | "+str(current_time)+"] Cookie injected")
         driver.refresh()
         wait = WebDriverWait(driver, 15)
         waits = WebDriverWait(driver, 3)
         #driver.set_window_size(1024, 480)
         try:
             waits.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="main"]/div/div[1]/div')))
-            print('[*] Page loaded')
+            print("[* | "+str(current_time)+"] Page loaded")
         except:
             pass
 
@@ -125,18 +136,19 @@ def main():
 
     #Followers
     def loop0():
+        global current_time
         global Followers
 
         try:
             ck = wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[4]/div[1]/div[3]/div/div[1]/div/p/small')))
             if ck.text == "soon will be update":
-                print("[x] Unavailable => Followers")
+                print("[x | "+str(current_time)+"] Unavailable => Followers")
                 loop1()  # if it's being updated, continue right away
             else:
                 wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[4]/div[1]/div[3]/div/div[1]/div/button'))).click()
 
         except:
-            print("[-] The captcha is unsolved! 1")
+            print("[- | "+str(current_time)+"] The captcha is unsolved! 1")
             sleep(10)
             driver.refresh()
             loop1()
@@ -151,7 +163,7 @@ def main():
             try:
                 lmt = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "h4")))
                 timer_message = lmt.text
-                print("[=] Followers Timer: " + timer_message)
+                print("[= | "+str(current_time)+"] Followers Timer: " + timer_message)
 
                 message_split = timer_message.split()
 
@@ -163,11 +175,11 @@ def main():
 
                     if (timer == 0) and (timer2 <= 10):
                         sleeping = timer2 + 1
-                        print("[=] Sleep: " + str(sleeping))
+                        print("[= | "+str(current_time)+"] Sleep: " + str(sleeping))
                         sleep(sleeping)
                         methodFollowers()
                     else:
-                        print("[x] Skipping Followers..")
+                        print("[x | "+str(current_time)+"] Skipping Followers..")
 
                 driver.refresh()
                 loop1()
@@ -175,13 +187,13 @@ def main():
             except:
                 try:
                     fn = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Not found video.']")))
-                    print("[x] Not found video..")
+                    print("[x | "+str(current_time)+"] Not found video..")
                     methodFollowers()
                     sleep(3)
                     driver.refresh()
                     loop1()
                 except:
-                    print("[-] An error occurred. Skipping => Followers")
+                    print("[- | "+str(current_time)+"] An error occurred. Skipping => Followers")
                     sleep(0.5)
                     driver.refresh()
                     loop1()
@@ -189,17 +201,18 @@ def main():
 
     #Views
     def loop1():
+        global current_time
         global Views
 
         try:
             ck = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[4]/div[1]/div[3]/div/div[4]/div/p/small")))
             if ck.text == "soon will be update":
-                print("[x] Unavailable => Views")
+                print("[x | "+str(current_time)+"] Unavailable => Views")
                 loop2()  #if it's being updated, continue right away
             else:
                 wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[4]/div[1]/div[3]/div/div[4]/div/button"))).click()
         except:
-            print("[-] The captcha is unsolved! 2")
+            print("[- | "+str(current_time)+"] The captcha is unsolved! 2")
             sleep(10)
             driver.refresh()
             loop1()
@@ -214,7 +227,7 @@ def main():
             try:
                 lmt = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "h4")))
                 timer_message = lmt.text
-                print("[=] Views Timer: " + timer_message)
+                print("[= | "+str(current_time)+"] Views Timer: " + timer_message)
 
                 message_split = timer_message.split()
 
@@ -226,11 +239,11 @@ def main():
 
                     if (timer == 0) and (timer2 <= 10):
                         sleeping = timer2 + 1
-                        print("[=] Sleep: " + str(sleeping))
+                        print("[= | "+str(current_time)+"] Sleep: " + str(sleeping))
                         sleep(sleeping)
                         methodView()
                     else:
-                        print("[x] Skipping Views..")
+                        print("[x | "+str(current_time)+"] Skipping Views..")
 
                 driver.refresh()
                 loop2()
@@ -238,13 +251,13 @@ def main():
             except:
                 try:
                     fn = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Not found video.']")))
-                    print("[x] Not found video..")
+                    print("[x | "+str(current_time)+"] Not found video..")
                     methodView()
                     sleep(3)
                     driver.refresh()
                     loop2()
                 except:
-                    print("[-] An error occurred. Skipping => Views")
+                    print("[- | "+str(current_time)+"] An error occurred. Skipping => Views")
                     sleep(3)
                     driver.refresh()
                     loop2()
@@ -252,18 +265,19 @@ def main():
 
     #Hearts
     def loop2():
+        global current_time
         global Hearts
 
         try:
             ck = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[4]/div[1]/div[3]/div/div[2]/div/p/small")))
             if ck.text == "soon will be update":
-                print("[x] Unavailable => Hearts")
+                print("[x | "+str(current_time)+"] Unavailable => Hearts")
                 loop3()  #if it's being updated, continue right away
             else:
                 wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[4]/div[1]/div[3]/div/div[2]/div/button"))).click()
 
         except:
-            print("[-] The captcha is unsolved! 3")
+            print("[- | "+str(current_time)+"] The captcha is unsolved! 3")
             sleep(10)
             driver.refresh()
             loop2()
@@ -278,7 +292,7 @@ def main():
             try:
                 lmt = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "h4")))
                 timer_message = lmt.text
-                print("[=] Hearts Timer: " + timer_message)
+                print("[= | "+str(current_time)+"] Hearts Timer: " + timer_message)
 
                 message_split = timer_message.split()
 
@@ -290,11 +304,11 @@ def main():
 
                     if (timer == 0) and (timer2 <= 10):
                         sleeping = timer2 + 1
-                        print("[=] Sleep: " + str(sleeping))
+                        print("[= | "+str(current_time)+"] Sleep: " + str(sleeping))
                         sleep(sleeping)
                         methodHearts()
                     else:
-                        print("[x] Hearts Unavailable")
+                        print("[x | "+str(current_time)+"] Hearts Unavailable")
 
                 driver.refresh()
                 loop3()
@@ -302,13 +316,13 @@ def main():
             except:
                 try:
                     fn = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Not found video.']")))
-                    print("[x] Not found video..")
+                    print("[x | "+str(current_time)+"] Not found video..")
                     methodHearts()
                     sleep(3)
                     driver.refresh()
                     loop3()
                 except:
-                    print("[-] An error occurred. Skipping => Hearts")
+                    print("[- | "+str(current_time)+"] An error occurred. Skipping => Hearts")
                     sleep(3)
                     driver.refresh()
                     loop3()
@@ -316,17 +330,18 @@ def main():
 
     #Shares
     def loop3():
+        global current_time
         global Shares
 
         try:
             ck = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[4]/div[1]/div[3]/div/div[5]/div/p/small")))
             if ck.text == "soon will be update":
-                print("[x] Unavailable => Shares")
+                print("[x | "+str(current_time)+"] Unavailable => Shares")
                 loop4() #if it's being updated, continue right away
             else:
                 wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[4]/div[1]/div[3]/div/div[5]/div/button"))).click()
         except:
-            print("[-] The captcha is unsolved! 4")
+            print("[- | "+str(current_time)+"] The captcha is unsolved! 4")
             sleep(10)
             driver.refresh()
             loop3()
@@ -339,7 +354,7 @@ def main():
             try:
                 lmt = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "h4")))
                 timer_message = lmt.text
-                print("[=] Shares Timer: " + timer_message)
+                print("[= | "+str(current_time)+"] Shares Timer: " + timer_message)
 
                 message_split = timer_message.split()
 
@@ -351,23 +366,23 @@ def main():
 
                     if (timer == 0) and (timer2 <= 10):
                         sleeping = timer2 + 1
-                        print("[=] Sleep: " + str(sleeping))
+                        print("[= | "+str(current_time)+"] Sleep: " + str(sleeping))
                         sleep(sleeping)
                         methodShare()
                     else:
-                        print("[x] Skipping Shares")
+                        print("[x | "+str(current_time)+"] Skipping Shares")
                 driver.refresh()
                 loop4()
             except:
                 try:
                     fn = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Not found video.']")))
-                    print("[x] Not found video..")
+                    print("[x | "+str(current_time)+"] Not found video..")
                     methodShare()
                     sleep(3)
                     driver.refresh()
                     loop4()
                 except:
-                    print("[-] An error occurred. Skipping => Shares")
+                    print("[- | "+str(current_time)+"] An error occurred. Skipping => Shares")
                     sleep(3)
                     driver.refresh()
                     loop4()
@@ -375,6 +390,7 @@ def main():
 
     #comment hearts
     def loop4():
+        global current_time
         global Username
         global Comments
         global total_comments
@@ -386,12 +402,12 @@ def main():
         try:
             ck = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[4]/div[1]/div[3]/div/div[3]/div/p/small")))
             if ck.text == "soon will be update":
-                print("[x] Unavailable => Comments Hearts")
+                print("[x | "+str(current_time)+"] Unavailable => Comments Hearts")
                 loop0()  #if it's being updated, continue right away
             else:
                 wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[4]/div[1]/div[3]/div/div[3]/div/button"))).click()
         except:
-            print("[-] The captcha is unsolved! 5")
+            print("[- | "+str(current_time)+"] The captcha is unsolved! 5")
             sleep(10)
             driver.refresh()
             loop4()
@@ -404,7 +420,7 @@ def main():
             try:
                 lmt = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "h4")))
                 timer_message = lmt.text
-                print("[=] Comments Timer: " + timer_message)
+                print("[= | "+str(current_time)+"] Comments Timer: " + timer_message)
                 message_split = timer_message.split()
                 if timer_message == "Checking Timer..." or timer_message == "Next Submit: READY....!":
                     methodComments()
@@ -414,31 +430,32 @@ def main():
 
                     if (timer == 0) and (timer2 <= 10):
                         sleeping = timer2 + 1
-                        print("[=] Sleep: " + str(sleeping))
+                        print("[= | "+str(current_time)+"] Sleep: " + str(sleeping))
                         sleep(sleeping)
                         methodComments()
                     else:
-                        print("[x] Skipping Comment-Hearts..")
+                        print("[x | "+str(current_time)+"] Skipping Comment-Hearts..")
                 driver.refresh()
                 loop0()
             except:
                 try:
                     fn = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Not found video.']")))
-                    print("[x] Video Not Found..")
+                    print("[x | "+str(current_time)+"] Video Not Found..")
                     methodComments()
                     sleep(3)
                     driver.refresh()
                     loop0()
                 except:
-                    print("[-] An error occurred. Skipping => Comments Hearts")
+                    print("[- | "+str(current_time)+"] An error occurred. Skipping => Comments Hearts")
                     sleep(3)
                     driver.refresh()
                     loop0()
 
     def methodFollowers():
+        global current_time
         global Followers
 
-        print("[N] Getting TikTok link")
+        print("[N | "+str(current_time)+"] Getting TikTok link")
         # sleep(1)
         wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="sid"]/div/form/div/input'))).clear()  # remove input
         wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid\"]/div/form/div/input"))).send_keys(vidUrl)  # input url
@@ -447,32 +464,34 @@ def main():
         waits.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZF9mb2xsb3dlcnNfdGlrdG9r\"]/div[1]/div/form/button"))).click()
 
         Followers += 25
-        print("[+] Followers Sent!")
+        print("[+ | "+str(current_time)+"] Followers Sent!")
         driver.refresh()
 
 
     def methodView():
+        global current_time
         global Views
-        print("[N] Getting TikTok link")
+        print("[N | "+str(current_time)+"] Getting TikTok link")
         # sleep(1)
         wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid4\"]/div/form/div/input"))).clear()  # remove input
         wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid4\"]/div/form/div/input"))).send_keys(vidUrl)  # input url
         wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid4\"]/div/form/div/div/button"))).click()  # submit
         sleep(2)
         tv = waits.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9V\"]/div[1]/div/form/button")))
-        print("[-] Total views: " + tv.text)
+        print("[- | "+str(current_time)+"] Total views: " + tv.text)
         Views = int(tv.text.replace(',', ''))
 
         waits.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9V\"]/div[1]/div/form/button"))).click()
 
         Views += 800
-        print("[+] Views Sent!")
+        print("[+ | "+str(current_time)+"] Views Sent!")
 
 
     def methodHearts():
+        global current_time
         global Hearts
 
-        print("[N] Getting TikTok link")
+        print("[N | "+str(current_time)+"] Getting TikTok link")
 
         # sleep(1)
         wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid2\"]/div/form/div/input"))).clear()  # remove input
@@ -480,34 +499,36 @@ def main():
         wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="sid2"]/div/form/div/div/button'))).click()  # submit
         sleep(2)
         th = waits.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZE9nb2xsb3dlcnNfdGlrdG9r\"]/div[1]/div/form/button")))
-        print("[-] Total hears: " + th.text)
+        print("[- | "+str(current_time)+"] Total hears: " + th.text)
         Hearts = int(th.text.replace(',', ''))
         waits.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="c2VuZE9nb2xsb3dlcnNfdGlrdG9r"]/div[1]/div/form/button'))).click()
-        print("[+] Hearts Sent!")
+        print("[+ | "+str(current_time)+"] Hearts Sent!")
 
 
     def methodShare():
+        global current_time
         global Shares
-        print("[N] Getting TikTok link")
+        print("[N | "+str(current_time)+"] Getting TikTok link")
         # sleep(1)
         wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid7\"]/div/form/div/input"))).clear()  # remove input
         wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid7\"]/div/form/div/input"))).send_keys(vidUrl)  # input url
         wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid7\"]/div/form/div/div/button"))).click()  # submit
         sleep(2)
         ts = waits.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9s\"]/div[1]/div/form/button")))
-        print("[-] Total share: " + ts.text)
+        print("[- | "+str(current_time)+"] Total share: " + ts.text)
         Shares = int(ts.text.replace(',', ''))
         waits.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9s\"]/div[1]/div/form/button"))).click()
-        print("[+] Shares Sent!")
+        print("[+ | "+str(current_time)+"] Shares Sent!")
 
 
     def methodComments():
+        global current_time
         global Username
         global Comments
         global total_comments
         global comments_num
         global number
-        print("[N] Getting TikTok link")
+        print("[N | "+str(current_time)+"] Getting TikTok link")
         # sleep(1)
         wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid3\"]/div/form/div/input"))).clear()  # remove input
         wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"sid3\"]/div/form/div/input"))).send_keys(vidUrl)  # input url
@@ -515,7 +536,7 @@ def main():
         sleep(2)
         tm = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/div[1]/div/form/button")))
         comments_num = tm.text
-        print("[=] Get number of comments: " + comments_num)
+        print("[= | "+str(current_time)+"] Get number of comments: " + comments_num)
         # sleep(1)
         wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/div[1]/div/form/button"))).click()
         sleep(2)
@@ -523,7 +544,7 @@ def main():
             usernamenya = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(total_comments) + "]/ul/li/div/span[1]")))
             komentarnya = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(total_comments) + "]/ul/li/div/span[2]")))
             counlovenya = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(total_comments) + "]/ul/li/div/div/span")))
-            print("[?] " + usernamenya.text + " : " + komentarnya.text + " [" + counlovenya.text + " hearts]")
+            print("[? | "+str(current_time)+"] " + usernamenya.text + " : " + komentarnya.text + " [" + counlovenya.text + " hearts]")
             Comments = int(counlovenya.text.replace(',', ''))
             Username = str(usernamenya.text)
             wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(total_comments) + "]/ul/li/div/button"))).click()
@@ -534,13 +555,13 @@ def main():
             usernamenya = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(total_comments) + "]/ul/li/div/span[1]")))
             komentarnya = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(total_comments) + "]/ul/li/div/span[2]")))
             counlovenya = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(total_comments) + "]/ul/li/div/div/span")))
-            print("[?] " + usernamenya.text + " : " + komentarnya.text + " [" + counlovenya.text + " hearts]")
+            print("[? | "+str(current_time)+"] " + usernamenya.text + " : " + komentarnya.text + " [" + counlovenya.text + " hearts]")
             Comments = int(counlovenya.text.replace(',', ''))
             Username = str(usernamenya.text)
             wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9r\"]/form[" + str(total_comments) + "]/ul/li/div/button"))).click()
             number += 1
             total_comments += 1
-        print("[+] Comments Hearts Sent!")
+        print("[+ | "+str(current_time)+"] Comments Hearts Sent!")
 
     clear()
     print("Log:")
@@ -560,6 +581,9 @@ def main():
 
 def sessid():
     global value
+    global current_time
+    t = threading.Thread(target=timez)
+    t.start()
     if os.path.isfile('key.txt'):
         os.remove("key.txt")
         e = open("key.txt", "w+")
@@ -571,14 +595,14 @@ def sessid():
     browser = webdriver.Chrome(options=options)
     browser.set_window_size(900, 1080)
     browser.get("https://zefoy.com/")
-    print('[*] Complete captcha')
+    print("[* | "+str(current_time)+"] Complete captcha")
     WebDriverWait(browser, 15).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[4]/div[1]/div[3]/div/div[1]/div/button')))
-    print('[*] Generating session ID...')
+    print("[* | "+str(current_time)+"] Generating session ID...")
     browser.set_window_position(-10000, 0)
     id = browser.get_cookie('PHPSESSID')
     f = open('key.txt', 'a+')
     f.write(id['value'])
-    print("[*] Session ID: " + id['value'])
+    print("[* | "+str(current_time)+"] Session ID: " + id['value'])
     value = id['value']
     browser.quit()
     main()
