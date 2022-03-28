@@ -1,5 +1,7 @@
 # - C M D  S T E P S - 
 ## [ 0 ] - DOWNLOADING CODE
+- ### Click here => [download](https://github.com/xtekky/zefoy/archive/refs/heads/main.zip)
+- ### Or download in Code > Download zip
 ![image](https://user-images.githubusercontent.com/98614666/160390771-86d5a58b-8338-402d-9235-1c830149086c.png)
 
 ## [ 1 ] - DOWNLOADING LIBRARIES
