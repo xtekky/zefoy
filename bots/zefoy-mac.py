@@ -536,9 +536,6 @@ def main():
             total_comments += 1
         print("[+ | "+str(current_time)+"] Comments Hearts Sent!")
 
-    clear()
-    print("Log:")
-
     if int(len(vidUrl)) >= 20:
         driver.get("https://zefoy.com/")
 
