@@ -35,7 +35,7 @@ cd the file path you just copied
 - ### Make sure that you have python installed - [Download](https://www.microsoft.com/en-us/p/python-310/9pjpw5ldxlz5#activetab=pivot:overviewtab)
 - ### Then Type (For v7):
 ```
-python zefoy-v7.py
+python zefoy-v71.py
 ```
 - ### You should see something similar to this
 ![image](https://user-images.githubusercontent.com/98614666/160392734-19f8b6d4-ff22-448b-ae90-383e81e205a5.png)
