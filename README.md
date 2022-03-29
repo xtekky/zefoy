@@ -4,12 +4,11 @@
 [![Youtube Channel](https://img.shields.io/youtube/channel/subscribers/UCVCxigi4I9fTuIxTlM9amtA?style=social)](https://www.youtube.com/channel/UC6JZx44gSD6-X_8xZoTMXUg)
 [![Insta](https://img.shields.io/twitter/follow/lol_kris?label=Instagram&logo=instagram&logoColor=red&style=social)](https://instagram.com/xtekky)
 # ⚡TIKTOK BOT - ZEFOY SCRIPT | [NEW UPDATE V8](https://github.com/xtekky/zefoy/tree/main/bots)⚡
-- ## NEW+STAY UPDATED! - [TELEGRAM GROUP](https://t.me/onlpx) | [DISCORD SERVER](https://discord.gg/m6wdhpMV5A)
+- ## JOIN TO GET V8 - [TELEGRAM GROUP](https://t.me/onlpx) | [DISCORD SERVER](https://discord.gg/m6wdhpMV5A)
 - ## NEW! - [TUTORIAL FOR V7](https://github.com/xtekky/zefoy/blob/main/NEW-TUTORIAL.md)
-- ## TO COME - YTB TUTORIAL
-## - FEEL FREE TO DM - ISSUES | QUESTIONS | COLLAB | PROJECT IDEA -
-- 📫 Discord: [xtekky#9031](https://discord.gg/)
-- 📲 Telegram: [t.me/xtekky](https://t.me/xtekky)
+## - JOIN SERVER - ISSUES | QUESTIONS | COLLAB | PROJECT IDEA -
+- 📫 Discord: [discord.gg/m6wdhpMV5A]( https://discord.gg/m6wdhpMV5A)
+- 📲 Telegram: [t.me/onlpx](https://t.me/xtekky)
 ----
 - #### UPDATED 24/03/2022 v7.1.1
 - #### NO PAY TO UNBLOCK OR 5 MONTH OLD BS
