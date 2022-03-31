@@ -22,12 +22,12 @@
 - ### 🟢 [AVAILABLE] - SHARES         
 - ### 🟢 [AVAILABLE] - COMMENT LIKES  
 - ### 🔴 [UNAVAILABLE] - HEARTS         
-- ### 🟢 [AVAILABLE]  - FOLLOWERS       
+- ### 🔴 [UNAVAILABLE] - HEARTS     
 - ### 🟢 [AVAILABLE] - LIVE STREAM     
 
 ----
 ## Newest version
-- ### Github: [zefoy-v7.py](https://github.com/xtekky/zefoy/blob/main/bots/zefoy-v7.py)
+- ### Github: [zefoy-v83.py](https://github.com/xtekky/zefoy/blob/main/bots/zefoy-v83.py)
 _______
 ## Any Issues?
 - **contact me, INFO on top**
