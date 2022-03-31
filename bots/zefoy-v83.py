@@ -8,11 +8,11 @@ print('''
 A I - V E R S I O N
 
 SCRIPT IS AVAILABLE IN OUR DISCORD SERVER: https://discord.gg/m6wdhpMV5A
-JOIN OUR DISCORD TO GET V8
+JOIN OUR DISCORD TO GET V8.3
 
 ---------------------------------------------------------------------------------------------------------------------------------------
-Z E F O Y - B O T  V.8
-How does zefoy bot v.8 work?
+Z E F O Y - B O T  V.8.3
+How does zefoy bot v8.3 work?
 The zefoy bot v.8 AI
 - Zefoy bot v.8 implements an Artificial Inteligence, that solves the captcha automatically.
 - This gives the bot the ability to keep running for an endless amount of time.
@@ -29,7 +29,7 @@ Advantages
 - You will also get the VIP role and acess to all future vip scripts.
 Pricing
 Zefoy bot is starting at very reasonable prices:
-- Script: 4.99€
+- Script: 7.99€
 - Full Setup: 1.99€
 Want more?
 We have acess to our own botnet with awesome performances!
