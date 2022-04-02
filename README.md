@@ -5,6 +5,7 @@
 [![Insta](https://img.shields.io/twitter/follow/lol_kris?label=Instagram&logo=instagram&logoColor=red&style=social)](https://instagram.com/xtekky)
 # ⚡TIKTOK BOT - ZEFOY SCRIPT | [NEW UPDATE V8.3 - CAPTCHA AI AND MUCH MORE](https://github.com/xtekky/zefoy/tree/main/bots)⚡
 - ## JOIN TO GET V8 - [TELEGRAM GROUP](https://t.me/onlpx) | [DISCORD SERVER](https://discord.gg/m6wdhpMV5A)
+![standard](https://user-images.githubusercontent.com/98614666/161380386-36451ff3-efb6-4a37-97a8-6732e9833581.gif)
 - ### Script: **7.99€**
 - ### Full setup and assistance: **1.99€**
 - ### Payment methods: [paypal](paypal.me/xtekky) and crypto !
