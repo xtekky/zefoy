@@ -6,7 +6,7 @@
 # ⚡TIKTOK BOT - ZEFOY SCRIPT | [NEW UPDATE V8.3 - CAPTCHA AI AND MUCH MORE](https://github.com/xtekky/zefoy/tree/main/bots)⚡
 - ## JOIN TO GET V8 - [TELEGRAM GROUP](https://t.me/onlpx) | [DISCORD SERVER](https://discord.gg/onlp)
 - ## https://discord.gg/onlp
-- 
+
 ![image](https://user-images.githubusercontent.com/98614666/161380450-33cb11ce-1638-4a9c-84d7-733e1106f499.png)
 ![standard](https://user-images.githubusercontent.com/98614666/161380386-36451ff3-efb6-4a37-97a8-6732e9833581.gif)
 - ### Script: **7.99€**
