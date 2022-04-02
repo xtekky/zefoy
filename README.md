@@ -10,6 +10,7 @@
 - ### Full setup and assistance: **1.99€**
 - ### Payment methods: [paypal](paypal.me/xtekky) and crypto !
 ![image](https://user-images.githubusercontent.com/98614666/161166274-43244d60-2012-4f4b-80dc-19df65e9291a.png)
+![image](https://user-images.githubusercontent.com/98614666/161380416-473755a4-d850-4315-b095-3bc353f776d4.png)
 - ## NEW! - [TUTORIAL FOR V7](https://github.com/xtekky/zefoy/blob/main/NEW-TUTORIAL.md)
 ## - JOIN SERVER - ISSUES | QUESTIONS | COLLAB | PROJECT IDEA -
 - 📫 Discord: [discord.gg/m6wdhpMV5A]( https://discord.gg/m6wdhpMV5A)
