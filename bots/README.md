@@ -1,7 +1,10 @@
+
+# JOIN DICORD TO GET FREE SCRIPTS!!: [discord.gg/onlp](https://discord.gg/onlp)
+## removed scripts because of ppl reselling !!
+______
 # NEW | Zefoy V7.1
 - ### updated: 18h00 28/03/2022
 - Time in Log and Bug fix + zefoy path bypass
-______
 # Zefoy V7
 - ####  SILENT MODE AND CAPTCHA BYPASS BY ID INJECTION
 # Zefoy V5
