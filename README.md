@@ -5,7 +5,8 @@
 [![Insta](https://img.shields.io/twitter/follow/lol_kris?label=Instagram&logo=instagram&logoColor=red&style=social)](https://instagram.com/xtekky)
 # ⚡TIKTOK BOT - ZEFOY SCRIPT | [NEW UPDATE V8.3 - CAPTCHA AI | HYBRID](https://github.com/xtekky/zefoy/tree/main/bots)⚡
 - ## JOIN TO GET V8 or hybrid- [TELEGRAM GROUP](https://t.me/onlpx) | [DISCORD SERVER](https://discord.gg/onlp)
-- ## https://discord.gg/onlp
+- ## FREE SCRIPT AVAILABLE IN: [discord.gg/onlp](https://discord.gg/onlp) - (removed all because of resellers)
+- ## https://discord.gg/onlp 
 
 ![image](https://user-images.githubusercontent.com/98614666/161380450-33cb11ce-1638-4a9c-84d7-733e1106f499.png)
 ![standard](https://user-images.githubusercontent.com/98614666/161380386-36451ff3-efb6-4a37-97a8-6732e9833581.gif)
