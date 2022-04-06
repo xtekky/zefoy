@@ -1,6 +1,6 @@
 
 # JOIN DICORD TO GET FREE SCRIPTS!!: [discord.gg/onlp](https://discord.gg/onlp)
-## removed scripts because of ppl reselling !!
+- ### removed scripts because of ppl reselling !!
 ______
 # NEW | Zefoy V7.1
 - ### updated: 18h00 28/03/2022
