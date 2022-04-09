@@ -10,7 +10,7 @@
 
 ![image](https://user-images.githubusercontent.com/98614666/161380450-33cb11ce-1638-4a9c-84d7-733e1106f499.png)
 ![standard](https://user-images.githubusercontent.com/98614666/161380386-36451ff3-efb6-4a37-97a8-6732e9833581.gif)
-- ### Premium: **10.99€ / 11.99$**
+- ### Premium: **16.99€ / 19.99$** 
 - ### Full setup and assistance: **1.99€ / 2.99$**
 - ### Payment methods: [paypal](paypal.com), crypto and [sellix](https://onlpx.sellix.io)!
 ![image](https://user-images.githubusercontent.com/98614666/161166274-43244d60-2012-4f4b-80dc-19df65e9291a.png)
