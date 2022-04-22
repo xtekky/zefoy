@@ -576,7 +576,7 @@ if __name__ == '__main__':
         _ = system('clear')
     system('title TIKTOK BOT')
 
-    title = """zefoy bitch"""
+    title = """                                  ZEFOY BITCH"""
 
     print(Colorate.Horizontal(Colors.blue_to_purple, title, 1))
     print('\n')
