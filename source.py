@@ -1,15 +1,20 @@
-from selenium import webdriver
-from os import system, name
-from time import time, strftime, gmtime, sleep
-from selenium.webdriver.common.by import By
-import threading, warnings
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from pystyle import *
-import undetected_chromedriver as uc
-from datetime import datetime
-from selenium.webdriver.chrome.options import Options
-
+try:
+    from selenium import webdriver
+    from os import system, name
+    from time import time, strftime, gmtime, sleep
+    from selenium.webdriver.common.by import By
+    import threading, warnings
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from pystyle import *
+    import undetected_chromedriver as uc
+    from datetime import datetime
+    from selenium.webdriver.chrome.options import Options
+except:
+    print('ERROR - Importing modules, check if all requirements are installed')
+    
+    
+    
 '''
 Copyright (c) 2022 @xtekky
 
