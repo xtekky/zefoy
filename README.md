@@ -16,7 +16,7 @@
 ```js
   v.9.0.0 
 ```
-## Reauirements
+## Requirements
 ```js
   pip install pystyle
   pip install selenium
