@@ -16,6 +16,12 @@
 ```js
   v.9.0.0 
 ```
+## Reauirements
+```js
+  pip install pystyle
+  pip install selenium
+  pip install undetected-chromedriver
+```
 ## Credits:
 ```js
   Discord : Tekky#9999
