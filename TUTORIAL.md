@@ -6,16 +6,13 @@
 
 ## [ 1 ] - DOWNLOADING LIBRARIES
 - ### Open Command Prompt (CMD) and Paste/enter each 4 of these commands:
-```
+```js
 pip install selenium
 ```
+```js
+pip install pystyle
 ```
-pip install pyfiglet
-```
-```
-pip install chromedriver-autoinstaller
-```
-```
+```js
 pip install undetected-chromedriver
 ```
 ## [ 2 ] - COPYING FILE PATH
