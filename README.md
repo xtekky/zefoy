@@ -6,9 +6,11 @@
 
 <h1 align="center">⚡ZEFOY {TikTok Zefoy Bot}</h1>
 
-Official server: [discord.gg/onlp](https://discord.gg/onlp)
+**Official server: [discord.gg/onlp](https://discord.gg/onlp)**
 
-Shares Server: [discord.gg/xshares](https://discord.gg/xshares)
+**Official shop: [onlp.sellix.io](https://onlp.sellix.io)**
+
+**Shares Server: [discord.gg/xshares](https://discord.gg/xshares)**
 
 ## Newest version
 ```js
