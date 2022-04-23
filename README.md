@@ -14,17 +14,20 @@ Shares Server: [discord.gg/xshares](https://discord.gg/xshares)
 ```js
   v.9.0.0 
 ```
+## Credits:
+```js
+  Discord : Tekky#9999
+  Telegram : t.me/xtekky
+```
+## Donate:
+```js
+  ETH : 0x2348Ef94B92eF683a8ba847252F8215E4dD7f161
+  BTC : 3KCuJrbua5T48zr9mYDCzESABAvnac7u6P
+  PayPal: paypal.me/xtekky
+```
+  
+##  
+ > [![](https://cdn.discordapp.com/avatars/719864492514738226/a_5de73a96793f9b0b3cbbafc2efc25ec7.gif?size=100)](https://github.com/xtekky) <br>Tekky © 2022 | ONLP™
+ <br>
 
-##  Credits:
- > [![](https://cdn.discordapp.com/avatars/719864492514738226/a_5de73a96793f9b0b3cbbafc2efc25ec7.gif?size=100)](https://github.com/xtekky) <br>Tekky
- <br>ETH : 0x2348Ef94B92eF683a8ba847252F8215E4dD7f161
- <br>BTC : 3KCuJrbua5T48zr9mYDCzESABAvnac7u6P
- <br>Telegram : [t.me/xtekky](https://t.me/xtekky)
- <br>Discord : Tekky#9999
-----
-## 
-- ### 
-_______
-## Any Issues?
-- **contact me, INFO on top**
 
