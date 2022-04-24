@@ -10,7 +10,7 @@
 
 **Official shop: [onlp.sellix.io](https://onlp.sellix.io)**
 
-**Shares Server: [discord.gg/xshares](https://discord.gg/xshares)**
+**Shares Server: [discord.gg/shares](https://discord.gg/shares)**
 
 ## Newest version
 ```js
