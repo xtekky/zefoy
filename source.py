@@ -6,5 +6,7 @@ My only socials: Tekky#9999 | Tekky#6666 | discord.gg/onlp | discord.g/shares
 
 Made with <3 By Tekky
 
-I apologize for the inconvenience caused
+I apologize for the inconvenience caused, 
+
+github.com/xtekky
 ''')
