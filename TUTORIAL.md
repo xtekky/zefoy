@@ -16,30 +16,10 @@ pip install pystyle
 pip install undetected-chromedriver
 ```
 ## [ 2 ] - COPYING FILE PATH
-- ### Open the folder containing zefoy in zefoy-main > bots:
-![image](https://user-images.githubusercontent.com/98614666/160391352-5ca3bc19-0351-489a-a4f1-643e60c66334.png)
-- ### Copy the folder path:
-![image](https://user-images.githubusercontent.com/98614666/160391445-ba0f5de0-992c-4faa-a1ec-cab5794bc86a.png)
- 
-## [ 3 ] - RUNNING CODE
-- ### Open Command Prompt (CMD)
-- ### Paste the file path you just copied and add **cd** before it:
-```
-cd the file path you just copied
-```
-- ### It should end in: \zefoy-main\bots
-![image](https://user-images.githubusercontent.com/98614666/160391780-e23ded36-5594-4592-b1a9-8935384c30d4.png)
-- ### Make sure that you have python installed - [Download](https://www.microsoft.com/en-us/p/python-310/9pjpw5ldxlz5#activetab=pivot:overviewtab)
-- ### Then Type (For v7):
-```
-python zefoy-v71.py
-```
-- ### You should see something similar to this
-![image](https://user-images.githubusercontent.com/98614666/160392734-19f8b6d4-ff22-448b-ae90-383e81e205a5.png)
+- ### Open the folder containing `source.py` and replace the path by cmd and enter
 
-- ### Hit ENTER
-- ### You should see this (for v.71):
-![image](https://user-images.githubusercontent.com/98614666/160392853-7ee07859-9bd0-455b-be0b-1c01894d4009.png)
+https://user-images.githubusercontent.com/98614666/165303208-43b8c27c-e599-4c15-8a1b-49c25f04343f.mov
+
 
 ## [ 4 ] - FINAL STEPS
 - ### Copy and Paste TikTok Url:
