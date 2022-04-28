@@ -1,7 +1,7 @@
 ![Views](https://img.shields.io/github/commit-activity/y/xtekky/zefoy)
 ![Releqse](https://img.shields.io/github/v/release/xtekky/zefoy?include_prereleases)
 
-<h1 align="center">⚡ZEFOY {TikTok Zefoy Bot}</h1>
+<h1 align="center">⚡ZEFOY [ TikTok Zefoy Bot ]</h1> 
 
 **Official server: [discord.gg/onlp](https://discord.gg/onlp)**
 
