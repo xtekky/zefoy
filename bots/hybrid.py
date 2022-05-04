@@ -22,7 +22,7 @@ in cmd - the module you tried to import was not found - make sure you have pytho
   SCRIPT IS AVAILABLE IN OUR DISCORD SERVER: https://discord.gg/onlp
   JOIN OUR DISCORD TO GET VHYBRID AND ALL OTHER VERSIONS
 
-  > v8.3.3 - script with ai, fast => 30k/h (CAPTCHA ai)
+  > v10.0.0 - script with ai, fast => 30k/h (CAPTCHA ai)
   > hybrid - zefoy.com + freer.es + more (in the future) - 45k/h
   > shop - https://onlp.sellix.io
 
