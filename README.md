@@ -3,7 +3,7 @@
 
 <h1 align="center">⚡ZEFOY [ TikTok Zefoy Bot ]</h1> 
 
-**Get the script in: [discord.gg/onlp](https://discord.gg/onlp)** !!
+## Get the script in: [discord.gg/onlp](https://discord.gg/onlp) !!
 
 **Official shop: [onlp.sellix.io](https://onlp.sellix.io)**
 
