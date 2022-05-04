@@ -7,7 +7,7 @@ print('''
 ╚══════╝╚══════╝╚═╝      ╚═════╝    ╚═╝       ╚═════╝  ╚═════╝    ╚═╝         ╚═══╝ ╚═╝ ╚════╝ 
 A I - V E R S I O N
 
-SCRIPT IS AVAILABLE IN OUR DISCORD SERVER: https://discord.gg/m6wdhpMV5A
+SCRIPT IS AVAILABLE IN OUR DISCORD SERVER: https://discord.gg/onlp
 JOIN OUR DISCORD TO GET V8.3
 
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -27,12 +27,8 @@ Advantages
 - Once you buy the bot, you get acess to the future versions for FREE.
 - These future versions will of course be available to buy but more expensive.
 - You will also get the VIP role and acess to all future vip scripts.
-Pricing
-Zefoy bot is starting at very reasonable prices:
-- Script: 7.99€
-- Full Setup: 1.99€
+
 Want more?
 We have acess to our own botnet with awesome performances!
 - We offer Tiktok [followers/views/likes] and Instagram [followers/views/likes]
-- Aswell as many other options, DM us at xtekky#9031 and Anur#8475
-''')
+- Aswell as many other options, DM us at Waxor#9999
