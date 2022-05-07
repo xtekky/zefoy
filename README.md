@@ -19,7 +19,7 @@
 ```
 ## Credits:
 ```js
-  Discord : Waxor#9999
+  Discord : Tekky#9999
   Telegram : t.me/xtekky
 ```
 ## Donate:
