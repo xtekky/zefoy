@@ -13,10 +13,10 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/languages/top/xtekky/Twitch-Account-Gen?style=flat-square" </a>
-  <img src="https://img.shields.io/github/last-commit/xtekky/Twitch-Account-Gen?style=flat-square" </a>
-  <img src="https://img.shields.io/github/stars/xtekky/Twitch-Account-Gen?color=7F9DE0&label=Stars&style=flat-square" </a>
-  <img src="https://img.shields.io/github/forks/xtekky/Twitch-Account-Gen?color=7F9DE0&label=Forks&style=flat-square" </a>
+  <img src="https://img.shields.io/github/languages/top/xtekky/zefoy?style=flat-square" </a>
+  <img src="https://img.shields.io/github/last-commit/xtekky/zefoy?style=flat-square" </a>
+  <img src="https://img.shields.io/github/stars/xtekky/zefoy?color=7F9DE0&label=Stars&style=flat-square" </a>
+  <img src="https://img.shields.io/github/forks/xtekky/zefoy?color=7F9DE0&label=Forks&style=flat-square" </a>
 </p>
 
 <h4 align="center">
