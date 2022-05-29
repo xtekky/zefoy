@@ -1,30 +1,84 @@
-![Views](https://img.shields.io/github/commit-activity/y/xtekky/zefoy)
-![Releqse](https://img.shields.io/github/v/release/xtekky/zefoy?include_prereleases)
+<h1 align="center">
+  TikTok AIO 🪐
+</h1>
 
-<h1 align="center">⚡ZEFOY [ TikTok Zefoy Bot ]</h1> 
+<p align="center">
+  TikTok AIO is available free in https://discord.gg/onlp
+</p>
 
-## Get the script in: [discord.gg/onlp](https://discord.gg/onlp) !!
+<p align="center"> 
+  <kbd>
+<img src="https://cdn.discordapp.com/attachments/979841729538687017/980559718730833950/tiktok-loddgo-3.png"></img>
+  </kbd>
+</p>
 
-**Official shop: [onlp.sellix.io](https://onlp.sellix.io)**
+<p align="center">
+  <img src="https://img.shields.io/github/languages/top/xtekky/Twitch-Account-Gen?style=flat-square" </a>
+  <img src="https://img.shields.io/github/last-commit/xtekky/Twitch-Account-Gen?style=flat-square" </a>
+  <img src="https://img.shields.io/github/stars/xtekky/Twitch-Account-Gen?color=7F9DE0&label=Stars&style=flat-square" </a>
+  <img src="https://img.shields.io/github/forks/xtekky/Twitch-Account-Gen?color=7F9DE0&label=Forks&style=flat-square" </a>
+</p>
 
-## Newest version
-```js
-  v.xxxxx
+<h4 align="center">
+  <a href="https://discord.gg">🌌・Discord</a>
+  <a href="https://github.com/xtekky/Twitch-Account-Gen#license">💻・License</a>
+  <a href="https://github.com/xtekky/Twitch-Account-Gen#changelog">📜・ChangeLog</a>
+</h4>
+
+<h2 align="center">
+   TikTok AIO was made by
+
+Love ❌ code ✅
+
+</h2>
+
+---
+
+## :fire: Features
+
+✔ Bot TikTok Followers, Likes, Views, Shares
+✔ Free
+
+---
+
+## 🚀・Setup Twitch Acc Gen
+
+```sh-session
+> Download python and install all requirements
 ```
-## Requirements
-```js
-  pip install pystyle
-  pip install selenium
-  pip install undetected-chromedriver
-```
-## Credits:
-```js
-  Discord : Tekky#9999
-  Telegram : t.me/xtekky
-```
-  
-##  
- > [![](https://cdn.discordapp.com/avatars/719864492514738226/a_5de73a96793f9b0b3cbbafc2efc25ec7.gif?size=100)](https://github.com/xtekky) <br>Tekky © 2022 | ONLP™
- <br>
 
+## 🎉・Upcoming/enhancements
 
+- Make it better faster
+- Making an .exe
+
+## 📄・License
+
+This project is licensed under the GPL General Public License v3.0 License - see the [LICENSE.md](./LICENSE) file for details
+```js
+  ・Educational purpose only and all your consequences caused by you actions is your responsibility
+  ・Selling this Free gen is forbidden
+  ・If you make a copy of this/or fork it, it must be open-source and have credits linking to this repo
+```
+
+## 💭・ChangeLog
+
+```diff
+v0.0.2 ⋮ 2022-05-28
+- removed open-source
+
+v0.0.2 ⋮ 2022-03-28
++ added silent driver
++ added cleaner Log
+
+v0.0.2 ⋮ 2022-03-28
++ cleaner code
+
+v0.0.1 ⋮ 2022-03-28
++ Added Main Script
++ Cleaned up Code
+```
+
+<p align="center">
+  README.md inspired from Rdimo
+</p>
