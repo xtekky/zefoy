@@ -1,5 +1,1 @@
-input(
-  """
-  TikTok Bot is in discord.gg/onlp
-  """
-)
+https://discord.gg/onlp
