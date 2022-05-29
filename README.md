@@ -21,8 +21,8 @@
 
 <h4 align="center">
   <a href="https://discord.gg">🌌・Discord</a>
-  <a href="https://github.com/xtekky/Twitch-Account-Gen#license">💻・License</a>
-  <a href="https://github.com/xtekky/Twitch-Account-Gen#changelog">📜・ChangeLog</a>
+  <a href="https://github.com/xtekky/zefoy#license">💻・License</a>
+  <a href="https://github.com/xtekky/zefoy#changelog">📜・ChangeLog</a>
 </h4>
 
 <h2 align="center">
