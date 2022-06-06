@@ -41,10 +41,10 @@ Love ❌ code ✅
 
 ---
 
-## 🚀・Setup Twitch Acc Gen
+## 🚀・Setup TikTok AIO
 
 ```sh-session
-> Download python and install all requirements
+> Download python and install all requirements, go to discord.gg/onlp, download the script there and run it
 ```
 
 ## 🎉・Upcoming/enhancements
