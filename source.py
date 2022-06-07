@@ -1,1 +1,1 @@
-https://discord.gg/onlp
+input('https://discord.gg/onlp')
