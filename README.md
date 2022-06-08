@@ -20,7 +20,7 @@
 </p>
 
 <h4 align="center">
-  <a href="https://discord.gg">🌌・Discord</a>
+  <a href="https://discord.gg/onlp">🌌・Discord</a>
   <a href="https://github.com/xtekky/zefoy#license">💻・License</a>
   <a href="https://github.com/xtekky/zefoy#changelog">📜・ChangeLog</a>
 </h4>
