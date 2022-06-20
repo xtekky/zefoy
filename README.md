@@ -1,5 +1,3 @@
-For devs: [zefoy-captcha-solver](https://github.com/xtekky/zefoy-captcha-solver)
-
 <h1 align="center">
   TikTok AIO 🪐
 </h1>
