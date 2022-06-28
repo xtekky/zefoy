@@ -1,3 +1,8 @@
+## V2 SOON USING REQUESTS, OPEN SOURCE AT 100 STARS
+- mobile users can now use it
+- faster and more reliable
+- bot 1k+ videos in parallel with proxies
+
 <h1 align="center">
   TikTok AIO 🪐
 </h1>
