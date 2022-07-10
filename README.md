@@ -3,10 +3,11 @@
 - faster and more reliable
 - bot 1k+ videos in parallel with proxies
 
+<!--
 ## Want Followers or Likes ?
 - Join [discord.gg/onlp](https://discord.gg/onlp)
 - 1k Followers = 3€ | 1k Likes = 2€
-
+-->
 <h1 align="center">
   TikTok AIO 🪐
 </h1>
