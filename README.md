@@ -1,7 +1,4 @@
-## V2 SOON USING REQUESTS, OPEN SOURCE AT 100 STARS
-- mobile users can now use it
-- faster and more reliable
-- bot 1k+ videos in parallel with proxies
+# SERVER GOT TERMED JOIN NEW ONE https://discord.gg/xtwitch
 
 <!--
 ## Want Followers or Likes ?
