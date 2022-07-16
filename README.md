@@ -4,15 +4,14 @@
 ## Want Followers or Likes ?
 - Join [discord.gg/onlp](https://discord.gg/onlp)
 - 1k Followers = 3€ | 1k Likes = 2€
--->
+
 <h1 align="center">
   TikTok AIO 🪐
 </h1>
-
 <p align="center">
   TikTok AIO is available free in https://discord.gg/onlp
 </p>
-
+-->
 <p align="center"> 
   <kbd>
 <img src="https://cdn.discordapp.com/attachments/979841729538687017/980559718730833950/tiktok-loddgo-3.png"></img>
