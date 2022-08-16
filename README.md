@@ -1,4 +1,4 @@
-# SERVER GOT TERMED JOIN NEW ONE https://discord.gg/xtwitch
+### Server: https://discord.gg/onlp
 
 <!--
 ## Want Followers or Likes ?
