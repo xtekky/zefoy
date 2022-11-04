@@ -1,4 +1,6 @@
-### Server: https://discord.gg/onlp
+### Server: https://discord.gg/onlp   
+> :warning: **working again, if you don't have golang,**: you can directly run the compiled .exe in /executables
+
 
 <!--
 ## Want Followers or Likes ?
@@ -55,8 +57,7 @@ Love ❌ code ✅
 
 ## 🎉・Upcoming/enhancements
 
-- Make it better faster
-- Making an .exe
+- Make it in python
 
 ## 📄・License
 
@@ -70,6 +71,9 @@ This project is licensed under the GPL General Public License v3.0 License - see
 ## 💭・ChangeLog
 
 ```diff
+v1.0.0 ⋮ 2022-11-04
++ golang working version using requests
+
 v0.0.2 ⋮ 2022-05-28
 - removed open-source
 
@@ -84,7 +88,3 @@ v0.0.1 ⋮ 2022-03-28
 + Added Main Script
 + Cleaned up Code
 ```
-
-<p align="center">
-  README.md inspired from Rdimo
-</p>
