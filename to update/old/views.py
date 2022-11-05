@@ -1,4 +1,4 @@
-import fade
+# import fade
 import undetected_chromedriver as uc
 from time import sleep
 from selenium.webdriver.common.by import By
