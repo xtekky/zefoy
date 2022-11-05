@@ -1,5 +1,6 @@
 ### Server: https://discord.gg/onlp   
-> :warning: **working again, if you don't have golang,**: you can directly run the compiled .exe in /executables     
+> :warning: **working again, if you don't have golang,**: you can directly run the compiled .exe in /executables         
+
 code is from @Djuk1c that used my method and wrote it in golang
 
 <!--
