@@ -1,23 +1,39 @@
+# xtekky @ 2022
+
 from re             import findall, compile
 from time           import time, sleep
 from json           import loads
 from random         import random
 from base64         import b64encode, b64decode
-from requests       import Session, get, head
+from requests       import Session, get, head, post
 from urllib.parse   import unquote
 from pystyle        import *
 from os             import system, name, execv
 from sys            import executable, argv
 from hashlib        import sha256
 from threading      import Thread
+from PIL            import Image
+from io             import BytesIO
 
-proxies   = None # experimental
-endpoints = {
+config = {
+    'cloudflare': 'kAMtbsTqP9nr2zH.dUqsGIlq60hFfRCsoy1WX.bPhiE-1669637072-0-150',
+    'mode'      : 'hearts'
+}
+
+item_id      = None
+proxies      = None # experimental
+
+endpoints    = {
     "views"     : "c2VuZC9mb2xsb3dlcnNfdGlrdG9V",
     "hearts"    : "c2VuZE9nb2xsb3dlcnNfdGlrdG9r",
     "followers" : "c2VuZF9mb2xsb3dlcnNfdGlrdG9r",
     "favorites" : "c2VuZF9mb2xsb3dlcnNfdGlrdG9L",
     "shares"    : "c2VuZC9mb2xsb3dlcnNfdGlrdG9s",
+}
+
+__keys__ = {
+    'key_1': None,
+    'key_2': None
 }
 
 class livecounts:
@@ -53,208 +69,208 @@ class livecounts:
             findall(r"(\d{18,19})", video_link)[0] if len(findall(r"(\d{18,19})", video_link)) == 1
             else findall(r"(\d{18,19})", head(video_link, allow_redirects=True, timeout=5).url)[0]
         )
-        
 
-class zefoy:
-    def __init__(self, *args, **kwargs) -> None:
-        self.__session  = Session(); self.__init_session(); self.__ad_cookies()
-        self.__aweme_id = None
-        self.__item_id  = None
-        self.__keys = {
-            'key_1': None,
-            'key_2': None
-        }
-        
-    def __title_loop(self):
-        if name == 'nt':
-            while True:
-                stats = livecounts.video_info(self.__item_id)
-                system('title Zefoy Bot by @xtekky ^| Likes: %s Views: %s Shares: %s ^| %s ^| mode: shares' % (
-                    stats['likeCount'], stats['viewCount'], stats['shareCount'], str(self.__item_id)
-                ))
-                
-                sleep(0.5)
-        
-    def __base_headers(self, addon: dict = {}) -> dict:
-        
-        return {
-            **addon,
-            "host"               : "zefoy.com",
-            "connection"         : "keep-alive",
-            "sec-ch-ua"          : "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\"",
-            "accept"             : "*/*",
-            "x-requested-with"   : "XMLHttpRequest",
-            "sec-ch-ua-mobile"   : "?0",
-            "user-agent"         : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36",
-            "sec-ch-ua-platform" : "\"Windows\"",
-            "origin"             : "https://zefoy.com",
-            "sec-fetch-site"     : "same-origin",
-            "sec-fetch-mode"     : "cors",
-            "sec-fetch-dest"     : "empty",
-            "accept-language"    : "en-US,en;q=0.9",
-        }
-        
-
-    def __get_captcha(self) -> str: 
-
-        __captcha_image = self.__session.get("https://zefoy.com/a1ef290e2636bf553f39817628b6ca49.php", 
-            headers = self.__base_headers(), 
-            proxies = proxies,
-            params  = {
-                "_CAPTCHA": "",
-                "t": f"{round(random(), 8)} {int(time())}"
-        })
-        
-        return str(b64encode(__captcha_image.content).decode())
-
+def __decrypt__(data: str) -> str:
+    # print(data)
+    a = unquote(data[::-1])
     
-    def __solve_captcha(self, __image_data: str) -> None:
-        response = self.__session.post('https://captcha.xtekky.repl.co/', json = {
-            'captcha': __image_data
+    return b64decode(a).decode()
+
+def __sprint__(x: str, num: int, msg: str, colour: str = Col.purple) -> None:
+    return '    %s{%s%s%s}%s %s %s[%s%s%s]%s' % (
+        colour, Col.reset,
+            x, 
+        colour, Col.reset,
+            num,
+        colour, Col.blue,
+            msg,
+        colour, Col.reset
+    )
+
+def __format__(string: str) -> str:
+    t = ""
+    
+    for i in string:
+        if i in t : pass
+        else      : t = t + i
+    
+    return t
+
+def __init__(__session__: Session) -> tuple:
+    __html__ = str(__session__.get('http://zefoy.com').text).replace('&amp;', '&')
+
+    captcha_token = findall(r'name="([A-Za-z0-9]{31,32})">', __html__)[0]
+    captcha_url   = findall(r'img src="([^"]*)"', __html__)[0]
+    sessid        = __session__.cookies.get('PHPSESSID')
+    
+    return captcha_token, captcha_url, sessid
+
+def __solve__(__session__: Session, captcha_token: str, captcha_url: str) -> True or False:
+    try:
+        captcha_image = __session__.get('https://zefoy.com' + captcha_url).content
+        response      = __session__.post('https://captcha.xtekky.repl.co/', json = {
+                'captcha': b64encode(captcha_image).decode('utf-8'),
         })
         
         if response.json()['status_code'] == 0:
-            captcha_answer = response.json()['captcha_answer']
-        
+            captcha_answer = __format__(response.json()['captcha_answer'])
+
         else:
-            print('            ' + zefoy.sprint('x', 'error    -', str(response.json())))
-            input('            ' + zefoy.sprint('*', 'restart  -', 'press ' + Col.white + 'enter'))
-            execv(executable, ['python'] + argv)
-        
-        try:
-            response = self.__session.post("https://zefoy.com/", 
-                headers = self.__base_headers(),
-                proxies = proxies,
-                data    = {
-                    "captcha_secure": captcha_answer,
-                    "r75619cf53f5a5d7ba6af82edfec3bf0": ""
-            })
-            
-            self.__keys["key_1"]  = findall('(?<=")[a-z0-9]{16}', response.text)[0]
-
-            return True
-        
-        except Exception:
-            return False
-        
-    def __init_session(self) -> None:
-        self.__session.get('https://zefoy.com/',
-            proxies = proxies,
-            headers = self.__base_headers()
-        )
-        
-    def __ad_cookies(self) -> None:
-
-        __ad_cookies = self.__session.get("https://partner.googleadservices.com/gampad/cookie.js", 
-            headers = {'host':'partner.googleadservices.com','connection':'keep-alive','sec-ch-ua':'"Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"','sec-ch-ua-mobile':'?0','user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36','sec-ch-ua-platform':'"Windows"','accept':'*/*','sec-fetch-site':'cross-site','sec-fetch-mode':'no-cors','sec-fetch-dest':'script','accept-encoding':'gzip, deflate, br','accept-language':'en-US,en;q=0.9'}, 
-            params  = {
-                "domain"   : "zefoy.com",
-                "callback" : "_gfp_s_",
-                "client"   : "ca-pub-3192305768699763",
-                "gpid_exp" : 1
-        })
-
-        __json_data = loads(findall(r'_gfp_s_\((.*)\);', __ad_cookies.text)[0])
-
-        self.__session.cookies.set("_gads", __json_data['_cookies_'][0]['_value_'], domain='zefoy.com')
-        self.__session.cookies.set("__gpi", __json_data['_cookies_'][1]['_value_'], domain='zefoy.com')
-        
-    def __zefoy_decrypt(self, data):
-        return b64decode(unquote(data[::-1])).decode()
+            print('            ' + __sprint__('x', 'error    -', 'need manual solving'))
+            image = Image.open(BytesIO(captcha_image))
+            image.show()
+            captcha_answer = input('            ' + __sprint__('?', 'input    -', 'captcha') + ' > '); print('\n')
     
-    def __search_link(self, __tiktok_link: str) -> None:
+        response = __session__.post('https://zefoy.com', data = {
+            "captcha_secure": captcha_answer,
+            captcha_token   : ""
+        })
+        
+        __keys__["key_1"]  = findall('(?<=")[a-z0-9]{16}', response.text)[0]
+
+        return True
+    
+    except Exception as e:
+        print('            ' + __sprint__('x', 'error    -', str(e)))
+        return False
+
+def __search__(__session__: Session, __tiktok_link: str) -> None:
+    try:
+
+        cookies = {
+                'cf_clearance': config["cloudflare"],
+                'PHPSESSID'   : __session__.cookies.get_dict()["PHPSESSID"]
+        }
+        
+        headers = {
+            'authority'         : 'zefoy.com',
+            'accept'            : '*/*',
+            'accept-language'   : 'en,fr-FR;q=0.9,fr;q=0.8,es-ES;q=0.7,es;q=0.6,en-US;q=0.5,am;q=0.4,de;q=0.3',
+            'content-type'      : 'multipart/form-data; boundary=----WebKitFormBoundary',
+            'origin'            : 'https://zefoy.com',
+            'sec-ch-ua'         : '"Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"',
+            'sec-ch-ua-mobile'  : '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest'    : 'empty',
+            'sec-fetch-mode'    : 'cors',
+            'sec-fetch-site'    : 'same-origin',
+            'user-agent'        : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+            'x-requested-with'  : 'XMLHttpRequest',
+        }
+
+        __search_link = post(f'https://zefoy.com/{endpoints[config["mode"]]}', headers=headers,
+            data    = f'------WebKitFormBoundary\r\nContent-Disposition: form-data; name="{__keys__["key_1"]}"\r\n\r\n{__tiktok_link }\r\n------WebKitFormBoundary--\r\n', 
+            cookies = cookies
+        )
+        __search_link_response = __decrypt__(__search_link.content)
+
+        if "Session expired. Please re-login." in __search_link_response:
+            print('            ' + __sprint__('x', 'error    -', 'session expired input your own sessionid'))
+            __session__.cookies['PHPSESSID'] = input('            ' + __sprint__('?', 'input    -', 'sessionid') + ' > '); print('\n')
+            __search__(__session__, __tiktok_link)
+            
+        if 'Please try again later. Server too busy' in __search_link_response or 'currently not working' in __search_link_response:
+            print('            ' + __sprint__('x', 'error    -', 'server busy / or currently disabled'))
+            sleep(60)
+            __search__(__tiktok_link)
+        
+        __keys__['key_2'], _= findall(r'name="(.*)" value="(.*)" hidden', __search_link_response)[0]
+        
+    except Exception as e:
         try:
+            timer = findall(r'ltm=(\d*);', __search_link_response)[0]
+            if int(timer) == 0:
+                return
             
-            __search_link = self.__session.post('https://zefoy.com/' + endpoints['shares'],
-                headers = self.__base_headers(),
-                proxies = proxies,
-                data = {
-                    self.__keys['key_1']: __tiktok_link
-            })
-            
-            __search_link_response = self.__zefoy_decrypt(__search_link.text)
-            # print(__search_link_response)
-            if 'Please try again later. Server too busy' in __search_link_response or 'currently not working' in __search_link_response:
-                print('            ' + zefoy.sprint('x', 'error    -', 'server busy'))
-                sleep(60)
-                self.__search_link(__tiktok_link)
-            
-            self.__keys['key_2'], self.__aweme_id = findall(r'name="(.*)" value="(.*)" hidden', __search_link_response)[0]
-            
-        except Exception:
-            try:
-                timer = findall(r'ltm=(\d*);', __search_link_response)[0]
-                if int(timer) == 0:
-                    return
+            print('            ' + __sprint__('*', 'sleeping -', 'for ' + Col.white + str(timer) +  Col.blue +' seconds'),  end="\r")
+
+            start = time()
+            while time() < start + int(timer):
+                time_left = str(round((start + int(timer)) - time()))
                 
-                print('            ' + zefoy.sprint('*', 'sleeping -', 'for ' + Col.white + str(timer) +  Col.blue +' seconds'),  end="\r")
+                if len(time_left) == 2:
+                    time_left = time_left + '  '
+                if len(time_left) == 1:
+                    time_left = time_left + '  '
+                
+                print('            ' + __sprint__('*', 'sleeping -', 'for ' + Col.white + time_left +  Col.blue +' seconds'),  end="\r"); sleep(1)
+            print('            ' + __sprint__('*', 'sending  -', f'{config["mode"]}...                                  '),  end="\r")
+            print('')
+            __search__(__tiktok_link)
 
-                start = time()
-                while time() < start + int(timer):
-                    time_left = str(round((start + int(timer)) - time()))
-                    
-                    if len(time_left) == 2:
-                        time_left = time_left + ' '
-                    if len(time_left) == 1:
-                        time_left = time_left + '  '
-                    
-                    print('            ' + zefoy.sprint('*', 'sleeping -', 'for ' + Col.white + time_left +  Col.blue +' seconds'),  end="\r"); sleep(1)
-                print('            ' + zefoy.sprint('*', 'sending  -', 'shares...'),  end="\r")
-                print('')
-                self.__search_link(__tiktok_link)
+        except Exception as e:
+            print('            ' + __sprint__('x', 'error    -', str(e)))
+            input('            ' + __sprint__('*', 'restart  -', 'press ' + Col.white + 'enter'))
+            execv(executable, ['python'] + argv)
 
-            except Exception as e:
-                print('            ' + zefoy.sprint('x', 'error    -', str(e)))
-                input('            ' + zefoy.sprint('*', 'restart  -', 'press ' + Col.white + 'enter'))
-                execv(executable, ['python'] + argv)
+def __send__(__session__: Session) -> None:
 
-    def __send_req(self) -> None:
-        self.__session.post('https://zefoy.com/' + endpoints['shares'],
-            headers = self.__base_headers(),
-            proxies = proxies,
-            data = {
-                self.__keys['key_2']: self.__aweme_id,
+    headers = {
+        'authority'         : 'zefoy.com',
+        'accept'            : '*/*',
+        'accept-language'   : 'en,fr-FR;q=0.9,fr;q=0.8,es-ES;q=0.7,es;q=0.6,en-US;q=0.5,am;q=0.4,de;q=0.3',
+        'content-type'      : 'multipart/form-data; boundary=----WebKitFormBoundary',
+        'origin'            : 'https://zefoy.com',
+        'sec-ch-ua'         : '"Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"',
+        'sec-ch-ua-mobile'  : '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-fetch-dest'    : 'empty',
+        'sec-fetch-mode'    : 'cors',
+        'sec-fetch-site'    : 'same-origin',
+        'user-agent'        : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+        'x-requested-with'  : 'XMLHttpRequest',
+    }
+
+    __send_req = post(f'https://zefoy.com/{endpoints[config["mode"]]}', headers = headers,
+        data    = f'------WebKitFormBoundary\r\nContent-Disposition: form-data; name="{__keys__["key_2"]}"\r\n\r\n{item_id}\r\n------WebKitFormBoundary--\r\n', 
+        cookies = {
+            'cf_clearance': config["cloudflare"],
+            'PHPSESSID'   : __session__.cookies.get_dict()["PHPSESSID"]
+    })
+    
+    # print(__decrypt__(__send_req.content))
+    
+    print('            ' + __sprint__('*', 'success  -', 'sent ' + Col.white + config['mode'] + Col.blue + ' !'))
+    sleep(5)
+
+if __name__ == '__main__':
+    with Session() as __session__:
+        __session__.cookies.set('cf_clearance', config['cloudflare'])
+        __session__.headers.update({
+            'authority'             : 'zefoy.com',
+            # 'accept'                : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            'accept-language'       : 'en,fr-FR;q=0.9,fr;q=0.8,es-ES;q=0.7,es;q=0.6,en-US;q=0.5,am;q=0.4,de;q=0.3',
+            'cp-extension-installed': 'Yes',
+            'sec-ch-ua'             : '"Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"',
+            'sec-ch-ua-mobile'      : '?0',
+            'sec-ch-ua-platform'    : '"Windows"',
+            'sec-fetch-dest'        : 'document',
+            'sec-fetch-mode'        : 'navigate',
+            'sec-fetch-site'        : 'none',
+            'sec-fetch-user'        : '?1',
+            'upgrade-insecure-requests' : '1',
+            'user-agent'                : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+            'x-requested-with'          : 'XMLHttpRequest',
         })
         
-        print('            ' + zefoy.sprint('*', 'success  -', 'sent ' + Col.white + 'shares' + Col.blue + ' !'))
-        sleep(5)
-    
-    def mainloop(self) -> None:
+        # print(__session__.headers)
+        a, b, c = __init__(__session__)
+
         __start         = time()
-        __captcha_image = self.__get_captcha()
-
-        if self.__solve_captcha(__captcha_image) is True:
-            print('            ' + zefoy.sprint('*', 'success  -', f'solved captcha: {Col.white}{round(time() - __start, 1)}{Col.blue}s'))
-            video_link = input('            ' + zefoy.sprint('?', 'input    -', 'video link') + ' > '); print('\n')
-            self.__item_id = livecounts.link_to_id(video_link)
-            Thread(target=self.__title_loop).start()
-            
-            while True:
-                self.__search_link(video_link); sleep(0.5)
-                self.__send_req(); sleep(1)
         
-        else:
-            print('            ' + zefoy.sprint('x', 'error    -', 'failed to solve captcha'))
-            input('            ' + zefoy.sprint('*', 'restart  -', 'press ' + Col.white + 'enter'))
-            execv(executable, ['python'] + argv)
+        if __solve__(__session__, a, b) == True:
+            print('            ' + __sprint__('*', 'success  -', f'solved captcha: {Col.white}{round(time() - __start, 1)}{Col.blue}s'))
+            video_link =  input('            ' + __sprint__('?', 'input    -', 'video link') + ' > '); print('\n')
+
+            item_id = livecounts.link_to_id(video_link)
+            # Thread(target=__title_loop).start()
+            # print(__keys__)
+            # sleep(4)
+            while True:
+                __search__(__session__, video_link); sleep(0.5)
+                __send__(__session__); sleep(1)
             
-    @staticmethod
-    def sprint(x: str, num: int, msg: str) -> None:
-        return '    %s{%s%s%s}%s %s %s[%s%s%s]%s' % (
-            Col.purple, Col.reset,
-            x, 
-            Col.purple, Col.reset,
-            num,
-            Col.purple, Col.blue,
-            msg,
-            Col.purple, Col.reset
-        )
-
-    @staticmethod
-    def startup():
-        system('cls' if name == 'nt' else ''); system('title Like Bot by @xtekky ^| starting...')
-        print(Col.purple + Center.XCenter('''\n ______ _______ _______  _____  __   __      ______   _____  _______\n  ____/ |______ |______ |     |   \_/        |_____] |     |    |   \n /_____ |______ |       |_____|    |         |_____] |_____|    |   \n                      made with <3 by tekky   ''') + Col.reset); print("\n\n")
-
-if __name__ == "__main__":
-    zefoy.startup()
-    zefoy(None).mainloop()
+        else:
+            print('            ' + __sprint__('x', 'error    -', 'failed to solve captcha'))
+            input('            ' + __sprint__('*', 'restart  -', 'press ' + Col.white + 'enter'))
+            execv(executable, ['python'] + argv)
