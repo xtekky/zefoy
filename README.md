@@ -1,3 +1,5 @@
+### new discord server: https://discord.gg/4CZn3Pbt
+
 unpatched
 > - added manual solving + cloudflare fix    
 > - unstable    
