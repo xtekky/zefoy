@@ -1,4 +1,4 @@
-### new discord server: https://discord.gg/gURBEpzawN
+### new discord server: https://discord.gg/onlpx
 
 unpatched
 > - added manual solving + cloudflare fix    
