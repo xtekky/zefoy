@@ -1,138 +1,201 @@
-from tls_client     import Session
-from re             import findall
-from PIL            import Image
-from io             import BytesIO
-from requests       import get
-from urllib.parse   import unquote
-from base64         import b64decode
-from time           import sleep, time
-from colorama       import Fore, init; init()
-from datetime       import datetime
-from json           import load
+try:
+    import undetected_chromedriver as uc
+    from   colorama import Fore, init, Style
+    import ctypes, platform, os, time
+    import selenium, requests, webbrowser
+
+except ImportError:
+    input("You do not have all of the modules required installed.")
+    os._exit(1)
+
+text = """
+ ███████ ███████ ███████  ██████  ██    ██ 
+    ███  ██      ██      ██    ██  ██  ██  
+   ███   █████   █████   ██    ██   ████   
+  ███    ██      ██      ██    ██    ██    
+ ███████ ███████ ██       ██████     ██    """
 
 
-def fmt(string) -> str:
-    return f"{Fore.CYAN}{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} {Fore.BLUE}INFO {Fore.MAGENTA}__main__ -> {Fore.RESET}{string}"
+class zefoy:
 
-class Client:
-    def session() -> Session:
-        return Session(client_identifier='chrome_108')
-    
-    def headers(extra: dict = {}) -> dict:
-        return {
-            **extra,
-            "host"              : "zefoy.com",
-            "connection"        : "keep-alive",
-            "sec-ch-ua"         : "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"",
-            "accept"            : "*/*",
-            "x-requested-with"  : "XMLHttpRequest",
-            "sec-ch-ua-mobile"  : "?0",
-            "user-agent"        : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
-            "sec-ch-ua-platform": "\"Windows\"",
-            "origin"            : "https://zefoy.com",
-            "sec-fetch-site"    : "same-origin",
-            "sec-fetch-mode"    : "cors",
-            "sec-fetch-dest"    : "empty",
-            "accept-encoding"   : "gzip, deflate, br",
-            "accept-language"   : "en-US,en;q=0.9",
+    def __init__(self):
+        self.driver      = uc.Chrome()
+        self.captcha_box = '/html/body/div[5]/div[2]/form/div/div'
+        self.clear       = "clear"
+        
+        if platform.system() == "Windows":
+            self.clear = "cls"
+        
+        self.color  = Fore.BLUE
+        self.sent   = 0
+        self.xpaths = {
+            "followers"     : "/html/body/div[6]/div/div[2]/div/div/div[2]/div/button",
+            "hearts"        : "/html/body/div[6]/div/div[2]/div/div/div[3]/div/button",
+            "comment_hearts": "/html/body/div[6]/div/div[2]/div/div/div[4]/div/button",
+            "views"         : "/html/body/div[6]/div/div[2]/div/div/div[5]/div/button",
+            "shares"        : "/html/body/div[6]/div/div[2]/div/div/div[6]/div/button",
+            "favorites"     : "/html/body/div[6]/div/div[2]/div/div/div[7]/div/button",
         }
+        
+    def main(self):
+        os.system(self.clear)
+        self.change_title("TikTok Automator using zefoy.com | Github: @xtekky")
+        
+        print(self.color + text)
+        print("\n" + self._print("Waiting for Zefoy to load... 502 Error = Blocked country or VPN is on"))
+        
+        self.driver.get("https://zefoy.com")
+        self.wait_for_xpath(self.captcha_box)
+        
+        print(self._print("Site loaded, enter the CAPTCHA to continue."))
+        print(self._print("Waiting for you..."))
+        
+        self.wait_for_xpath(self.xpaths["followers"])
+        os.system(self.clear)
+        status = self.check_status()
+        
+        print(self.color + text)
+        print()
+        print(self._print(f"Join our {self.color}Discord Server{Fore.WHITE} for exclusive FREE tools."))
+        print(self._print(f"You can also get updates when Zefoy updates the bots and more."))
+        print(self._print(f"Select your option below." + "\n"))
+        
+        counter = 1
+        for thing in status:
+            print(self._print(f"{thing} {status[thing]}", counter))
+            counter += 1
+        
+        print(self._print(f"Discord / Support", "7"))
+        option = int(input("\n" + self._print(f"")))
+        
+        if option == 1:
+            div = "7"
+            self.driver.find_element("xpath", self.xpaths["followers"]).click()
+        
+        elif option == 2:
+            div = "8"
+            self.driver.find_element("xpath", self.xpaths["hearts"]).click()
+            
+        elif option == 3:
+            div = "9"
+            self.driver.find_element("xpath", self.xpaths["comment_hearts"]).click()
+            
+        elif option == 4: #Views
+            div = "10"
+            self.driver.find_element("xpath", self.xpaths["views"]).click()
+            
+        elif option == 5:
+            div = "11"
+            self.driver.find_element("xpath", self.xpaths["shares"]).click()
+            
+        elif option == 6:
+            div = "12"
+            self.driver.find_element("xpath", self.xpaths["favorites"]).click()
+        
+        elif option == 7:
+            webbrowser.open('discord.gg/onlp')
+            os._exit(1)
+        
+        else:
+            os._exit(1)
+        
+        video_url_box = f'/html/body/div[{div}]/div/form/div/input'
+        search_box    = f'/html/body/div[{div}]/div/form/div/div/button'
+        vid_info      = input("\n" + self._print(f"Username/VideoURL: "))
+        
+        self.send_bot(search_box, video_url_box, vid_info, div)
 
-class Captcha:
-    def __init__(this, client: Session) -> None:
-        this.client = client
-    
-    def solve(this) -> None:
+    def send_bot(self, search_button, main_xpath, vid_info, div):
+        element = self.driver.find_element('xpath', main_xpath)
+        element.clear()
+        element.send_keys(vid_info)
+        self.driver.find_element('xpath', search_button).click()
+        time.sleep(3)
+        
+        ratelimit_seconds, full = self.check_submit(div)
+        if "(s)" in str(full):
+            self.main_sleep(ratelimit_seconds)
+            self.driver.find_element('xpath', search_button).click()
+            time.sleep(2)
+        
+        time.sleep(3)
+        
+        send_button = f'/html/body/div[{div}]/div/div/div[1]/div/form/button'
+        self.driver.find_element('xpath', send_button).click()
+        self.sent += 1
+        print(self._print(f"Sent {self.sent} times."))
+        
+        time.sleep(4)
+        self.send_bot(search_button, main_xpath, vid_info, div)
+
+    def main_sleep(self, delay):
+        while delay != 0:
+            time.sleep(1)
+            delay -= 1
+            self.change_title(f"TikTok Zefoy Automator using Zefoy.com | Cooldown: {delay}s | Github: @useragents")
+
+    def convert(self, min, sec):
+        seconds = 0
+        
+        if min != 0:
+            answer = int(min) * 60
+            seconds += answer
+        
+        seconds += int(sec) + 5
+        return seconds
+
+    def check_submit(self, div):
+        remaining = f"/html/body/div[{div}]/div/div/h4"
+        
         try:
-            html           = str(this.client.get('https://zefoy.com', headers = Client.headers()).text).replace('&amp;', '&')
-            captcha_token  = findall(r'<input type="hidden" name="(.*)">', html)[0]
-            captcha_url    = findall(r'img src="([^"]*)"', html)[0]
+            element = self.driver.find_element("xpath", remaining)
+        except:
+            return None, None
+        
+        if "READY" in element.text:
+            return True, True
+        
+        if "seconds for your next submit" in element.text:
+            output          = element.text.split("Please wait ")[1].split(" for")[0]
+            minutes         = element.text.split("Please wait ")[1].split(" ")[0]
+            seconds         = element.text.split("(s) ")[1].split(" ")[0]
+            sleep_duration  = self.convert(minutes, seconds)
             
-            print(fmt(f'captcha_token: {captcha_token}'))
-            print(fmt(f'captcha_url: {captcha_url}'))
+            return sleep_duration, output
+        
+        return element.text, None
+        
+    def check_status(self):
+        statuses = {}
+        
+        for thing in self.xpaths:
+            value = self.xpaths[thing]
+            element = self.driver.find_element('xpath', value)
             
-            captcha_image  = get('https://zefoy.com' + captcha_url, headers = Client.headers(), cookies=this.client.cookies.get_dict()).content;
-            image          = Image.open(BytesIO(captcha_image));image.show()
+            if not element.is_enabled():
+                statuses.update({thing: f"{Fore.RED}[OFFLINE]"})
             
-            captcha_answer = input('solve captcha: ')
-            
-            response = this.client.post('https://zefoy.com', headers = Client.headers({"content-type": "application/x-www-form-urlencoded"}), data = {
-                    "captcha_secure": captcha_answer,
-                    captcha_token   : ""
-            })
-            
-            key_1 = findall('(?<=")[a-z0-9]{16}', response.text)[0]
-            
-            print(fmt(f'key_1: {key_1}'))
-            
-            return key_1
-            
-        except Exception as e:
-            print(fmt(f'Failed to solve captcha (zefoy may have blocked you) [{e}]'))
-            return
-
-class Zefoy:
-    def __init__(this, client: Session) -> None:
-        this.client = client
-        this.key = Captcha(client).solve()
-        this.config = load(open('config.json', 'r'))
-
-    def decode(this, text: str) -> str:
-        return b64decode(unquote(text[::-1])).decode()
-    
-    def send(this, token: str, aweme_id: str) -> None:
-        try:
-            payload = f"--tekky\r\nContent-Disposition: form-data; name=\"{token}\"\r\n\r\n{aweme_id}\r\n--tekky--\r\n"
-            response = this.decode(this.client.post("https://zefoy.com/c2VuZC9mb2xeb3dlcnNfdGlrdG9V", 
-                data = payload, headers = Client.headers({"content-type": "multipart/form-data; boundary=tekky",})).text.encode())
-            
-            if 'views sent' in response: 
-                print(fmt(f'views sent to {aweme_id}'))
-                
             else:
-                print(fmt(f'Failed to send views to {aweme_id}'))
+                statuses.update({thing: f"{Fore.GREEN}[WORKS]"})
+        
+        return statuses
 
-        except Exception as e:
-            print(fmt(f'Failed to send views [{e}]'))
-    
-    def search(this, link: str) -> None:
-        try:
+    def _print(self, msg, status = "-"):
+        return f" {Fore.WHITE}[{self.color}{status}{Fore.WHITE}] {msg}"
 
-            payload = f"--tekky\r\nContent-Disposition: form-data; name=\"{this.key}\"\r\n\r\n{link}\r\n--tekky--\r\n"
-            response = this.decode(this.client.post("https://zefoy.com/c2VuZC9mb2xeb3dlcnNfdGlrdG9V", 
-                data = payload, headers = Client.headers({"content-type": "multipart/form-data; boundary=tekky",})).text.encode())
-            
-            if 'comviews' in response:
-                token, aweme_id = findall(r'name="(.*)" value="(.*)" hidden', response)[0]
-                print(fmt(f'sending to: {aweme_id} | key_2: {token}'))
-    
-                sleep(3); this.send(token, aweme_id)
-                
-            else:
+    def change_title(self, arg):
+        if self.clear == "cls":
+            ctypes.windll.kernel32.SetConsoleTitleW(arg)
 
-                timer = findall(r'ltm=(\d*);', response)[0]
-                if int(timer) == 0:
-                    return
-
-                print(fmt(f'time to sleep: {timer}   '),  end="\r")
-
-                start = time()
-                while time() < start + int(timer):
-
-                    print(fmt(f'time to sleep: {round((start + int(timer)) - time())}   '),  end="\r")
-                    sleep(1)
-                    
-                print(fmt(f'sending views...                '),  end="\r")
-
-        except Exception as e:
-            print(fmt(f'Failed to search link [{e}]'))
-            print(fmt(response))
-            return
-    
-    def mainloop(this) -> None:
+    def wait_for_xpath(self, xpath):
         while True:
-            this.search(this.config['link'])
-            sleep(5)
+            try:
+                f = self.driver.find_element('xpath', xpath)
+                return True
+            except selenium.common.exceptions.NoSuchElementException:
+                pass
 
-if __name__ == '__main__':
-    client = Client.session()
-    zefoy  = Zefoy(client).mainloop()
+if __name__ == "__main__":
+    obj = zefoy()
+    obj.main()
+    input()
