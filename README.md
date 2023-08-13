@@ -1,6 +1,3 @@
-### updated
-### new discord server: https://discord.gg/onlp
-
 unpatched
 > - added manual solving + cloudflare fix    
 > - unstable    
