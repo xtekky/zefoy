@@ -1,4 +1,4 @@
-Instead of unpatching every 2 days, I made a course to teach you guys exactly how i made zefoy bot and much much more and also 5+ years of reverse engineering knowledge:
+Instead of unpatching every 2 days, I made a course to teach [you](https://vm.tiktok.com/ZSH3k7QCNn1ao-8ACeX/ This post is shared via TikTok Lite. Download TikTok Lite to enjoy more posts:  https://www.tiktok.com/tiktoklite) guys exactly how i made zefoy bot and much much more and also 5+ years of reverse engineering knowledge:
 
 https://whop.com/reverser-academy
 <img width="782" alt="image" src="https://github.com/user-attachments/assets/c1060466-14a4-4dc3-bc8d-2e8ce19c96ad" />
