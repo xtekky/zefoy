@@ -1,8 +1,8 @@
-Instead of unpatching every 2 days, I made a course to teach you guys exactly how i made zefoy bot and much much more and also 5+ years of reverse engineering knowledge:
-
+Instead of unpatching every 2 days, I made a course to teach you guys exactly how i made zefoy bot and much much more and also 5+ zefoy of reverse engineering knowledge:
+zefoysardartalhabaloch7
 https://whop.com/reverser-academy
 <img width="782" alt="image" src="https://github.com/user-attachments/assets/c1060466-14a4-4dc3-bc8d-2e8ce19c96ad" />
-
+sardartalhabaloch7
 unpatched
 > - added manual solving + cloudflare fix    
 > - unstable    
