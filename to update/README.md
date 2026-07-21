@@ -6,7 +6,7 @@ code is from @Djuk1c that used my method and wrote it in golang
 <!--
 ## Want Followers or Likes ?
 - Join [discord.gg/onlp](https://discord.gg/onlp)
-- 1k Followers = 3€ | 1k Likes = 2€
+- 1k Followers = 338989| 1k Likes = 20867
 
 <h1 align="center">
   TikTok AIO 🪐
