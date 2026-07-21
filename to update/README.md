@@ -1,4 +1,4 @@
-### Server: https://discord.gg/onlp   
+### Server: https://discord.gg/onlp   swanhtetnaing7631
 > :warning: **working again, if you don't have golang,**: you can directly run the compiled .exe in /executables         
 
 code is from @Djuk1c that used my method and wrote it in golang
@@ -20,20 +20,20 @@ code is from @Djuk1c that used my method and wrote it in golang
 <img src="https://cdn.discordapp.com/attachments/979841729538687017/980559718730833950/tiktok-loddgo-3.png"></img>
   </kbd>
 </p>
-
+568688
 <p align="center">
   <img src="https://img.shields.io/github/languages/top/xtekky/zefoy?style=flat-square" </a>
   <img src="https://img.shields.io/github/last-commit/xtekky/zefoy?style=flat-square" </a>
   <img src="https://img.shields.io/github/stars/xtekky/zefoy?color=7F9DE0&label=Stars&style=flat-square" </a>
   <img src="https://img.shields.io/github/forks/xtekky/zefoy?color=7F9DE0&label=Forks&style=flat-square" </a>
 </p>
-
+865898
 <h4 align="center">
   <a href="https://discord.gg/onlp">🌌・Discord</a>
   <a href="https://github.com/xtekky/zefoy#license">💻・License</a>
   <a href="https://github.com/xtekky/zefoy#changelog">📜・ChangeLog</a>
 </h4>
-
+669088
 <h2 align="center">
    TikTok AIO was made by
 
