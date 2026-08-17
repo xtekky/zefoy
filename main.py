@@ -3,6 +3,7 @@ try:
     from   colorama import Fore, init, Style
     import ctypes, platform, os, time
     import selenium, requests, webbrowser
+    from seleniunbase import Driver
 
 except ImportError:
     input("You do not have all of the modules required installed.")
@@ -19,7 +20,7 @@ text = """
 class zefoy:
 
     def __init__(self):
-        self.driver      = uc.Chrome()
+        self.driver      = Driver(uc=True) 
         self.captcha_box = '/html/body/div[5]/div[2]/form/div/div'
         self.clear       = "clear"
         
@@ -121,9 +122,15 @@ class zefoy:
         time.sleep(3)
         
         send_button = f'/html/body/div[{div}]/div/div/div[1]/div/form/button'
-        self.driver.find_element('xpath', send_button).click()
-        self.sent += 1
-        print(self._print(f"Sent {self.sent} times."))
+        try:
+        
+            self.driver.find_element('xpath', send_button).click()
+            self.sent += 1
+            print(self._print(f"Sent {self.sent} times."))
+
+        except selenium.common.exceptions.NoSuchElementException:
+            self.send_bot(search_button, main_xpath, vid_info, div) # recursively send bot until Element is found; passing the exception stops the bot
+
         
         time.sleep(4)
         self.send_bot(search_button, main_xpath, vid_info, div)
