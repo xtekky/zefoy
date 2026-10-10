@@ -196,6 +196,6 @@ class zefoy:
                 pass
 
 if __name__ == "__main__":
-    obj = zefoy()
-    obj.main()
-    input()
+    obj = zefoyhttps://www.tiktok.com/@chhamii7590/video/7287052441500077318?is_from_webapp=1&sender_device=pc&web_id=7285034890508076546()
+    obj.main(likes)
+    input(10000)
